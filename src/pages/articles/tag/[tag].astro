@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 const { tag, posts } = Astro.props;
 ---
 
-<Layout title={`Posts tagged #${tag}`} description={`All posts tagged with ${tag}`}>
+<Layout title={`Posts tagged #${tag}`} description={`All posts tagged with ${tag}`} activeNav="articles">
   <h1>Posts tagged #{tag}</h1>
   <p><a href="/blog">← All posts</a></p>
   

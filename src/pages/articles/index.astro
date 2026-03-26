@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import PostCard from "../../components/PostCard.astro";
+import TagList from "../../components/TagList.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout title="Articles" description="All blog posts" activeNav="articles">
+  <h1>Blog</h1>
+  <p><a href="/rss.xml">RSS Feed</a></p>
+
+  {
+    sortedPosts.length === 0 ? (
+      <p>No posts yet.</p>
+    ) : (
+      sortedPosts.map((post) => <PostCard post={post} />)
+    )
+  }
+
+  <TagList />
+</Layout>
