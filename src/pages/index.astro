@@ -13,11 +13,13 @@ const recentPosts = posts
   <h1>Welcome</h1>
   <p>This is my site built with Astro and hosted on Cloudflare.</p>
   <p><a href="/blog">Read the Blog</a></p>
-  
+
   <h2>Recent Posts</h2>
-  {recentPosts.length === 0 ? (
-    <p>No posts yet.</p>
-  ) : (
-    recentPosts.map(post => <PostCard post={post} />)
-  )}
+  {
+    recentPosts.length === 0 ? (
+      <p>No posts yet.</p>
+    ) : (
+      recentPosts.map(post => <PostCard post={post} />)
+    )
+  }
 </Layout>

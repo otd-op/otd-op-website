@@ -31,15 +31,17 @@ const formattedUpdated = updatedDate?.toLocaleDateString('en-US', {
         {formattedUpdated && <span>(updated {formattedUpdated})</span>}
         <span>by {author}</span>
       </p>
-      {tags.length > 0 && (
-        <p>
-          {tags.map(tag => (
-            <a href={`/blog/tag/${tag}`}>#{tag}</a>
-          ))}
-        </p>
-      )}
+      {
+        tags.length > 0 && (
+          <p>
+            {tags.map(tag => (
+              <a href={`/blog/tag/${tag}`}>#{tag}</a>
+            ))}
+          </p>
+        )
+      }
     </header>
-    
+
     <div>
       <slot />
     </div>
