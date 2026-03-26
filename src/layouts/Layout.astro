@@ -1,14 +1,13 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import Navbar from '../components/Navbar.astro';
 
 interface Props {
   title: string;
   description?: string;
-  activeNav?: "about" | "articles" | "documents" | "join";
+  activeNav?: 'about' | 'articles' | 'documents' | 'join';
 }
 
 const { title, description, activeNav } = Astro.props;
-console.log(activeNav);
 ---
 
 <!doctype html>
@@ -16,10 +15,10 @@ console.log(activeNav);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,7 +46,7 @@ console.log(activeNav);
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
-      "Segoe UI",
+      'Segoe UI',
       Roboto,
       sans-serif;
   }

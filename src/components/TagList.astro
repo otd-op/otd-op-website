@@ -13,15 +13,19 @@ for (const post of posts) {
 const tags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
 ---
 
-{tags.length > 0 && (
-  <div>
-    <h3>Tags</h3>
-    <ul>
-      {tags.map(([tag, count]) => (
-        <li>
-          <a href={`/blog/tag/${tag}`}>{tag} ({count})</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+{
+  tags.length > 0 && (
+    <div>
+      <h3>Tags</h3>
+      <ul>
+        {tags.map(([tag, count]) => (
+          <li>
+            <a href={`/blog/tag/${tag}`}>
+              {tag} ({count})
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
