@@ -1,10 +1,10 @@
 ---
-title: "Hello World"
-description: "The first post on our new blog"
+title: 'Hello World'
+description: 'The first post on our new blog'
 pubDate: 2026-03-11
 draft: false
-tags: ["announcement", "meta"]
-author: "Jane Doe"
+tags: ['announcement', 'meta']
+author: 'Jane Doe'
 ---
 
 Welcome to our new blog! This is the first post using Astro Content Collections with Markdown.

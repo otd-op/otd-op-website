@@ -21,11 +21,13 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
   </h2>
   <time datetime={pubDate.toISOString()}>{formattedDate}</time>
   {description && <p>{description}</p>}
-  {tags.length > 0 && (
-    <p>
-      {tags.map(tag => (
-        <a href={`/blog/tag/${tag}`}>#{tag}</a>
-      ))}
-    </p>
-  )}
+  {
+    tags.length > 0 && (
+      <p>
+        {tags.map(tag => (
+          <a href={`/blog/tag/${tag}`}>#{tag}</a>
+        ))}
+      </p>
+    )
+  }
 </article>
