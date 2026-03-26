@@ -1,10 +1,10 @@
 ---
-title: "Building with Astro"
-description: "Why we chose Astro for this site"
+title: 'Building with Astro'
+description: 'Why we chose Astro for this site'
 pubDate: 2026-03-10
 draft: false
-tags: ["astro", "web-dev", "meta"]
-author: "Jane Doe"
+tags: ['astro', 'web-dev', 'meta']
+author: 'Jane Doe'
 ---
 
 We chose Astro for this site because of its excellent static site generation capabilities and minimal JavaScript approach.
@@ -37,7 +37,7 @@ Astro works great with Cloudflare Pages. The adapter is simple:
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  adapter: cloudflare()
+  adapter: cloudflare(),
 });
 ```
 

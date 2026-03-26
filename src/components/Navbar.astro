@@ -1,23 +1,22 @@
 ---
 interface Props {
-  activeItem?: "about" | "articles" | "documents" | "join";
+  activeItem?: 'about' | 'articles' | 'documents' | 'join';
 }
 
 const { activeItem } = Astro.props;
-console.log(activeItem, "test");
 
 const navItems = [
-  { label: "ABOUT", href: "/about", id: "about" },
-  { label: "ARTICLES", href: "/articles", id: "articles" },
-  { label: "DOCUMENTS", href: "/documents", id: "documents" },
-  { label: "JOIN!", href: "/join", id: "join" },
+  { label: 'ABOUT', href: '/about', id: 'about' },
+  { label: 'ARTICLES', href: '/articles', id: 'articles' },
+  { label: 'DOCUMENTS', href: '/documents', id: 'documents' },
+  { label: 'JOIN!', href: '/join', id: 'join' },
 ];
 
-import Logo from "../assets/logo.svg";
-import InstagramIcon from "../assets/instagram.svg";
-import RssIcon from "../assets/rss.svg";
-import Divider from "../assets/divider.svg";
-import NavItem from "./NavItem.astro";
+import Logo from '../assets/logo.svg';
+import InstagramIcon from '../assets/instagram.svg';
+import RssIcon from '../assets/rss.svg';
+import Divider from '../assets/divider.svg';
+import NavItem from './NavItem.astro';
 ---
 
 <nav class="navbar">
@@ -30,12 +29,8 @@ import NavItem from "./NavItem.astro";
 
     <ul class="navbar__links">
       {
-        navItems.map((item) => (
-          <NavItem
-            label={item.label}
-            href={item.href}
-            isActive={activeItem === item.id}
-          />
+        navItems.map(item => (
+          <NavItem label={item.label} href={item.href} isActive={activeItem === item.id} />
         ))
       }
       <li class="navbar__mobile-actions">
@@ -69,11 +64,7 @@ import NavItem from "./NavItem.astro";
       </a>
     </div>
 
-    <button
-      class="navbar__menu-toggle"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-    >
+    <button class="navbar__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span class="navbar__menu-bar"></span>
       <span class="navbar__menu-bar"></span>
       <span class="navbar__menu-bar"></span>
@@ -87,13 +78,13 @@ import NavItem from "./NavItem.astro";
 </nav>
 
 <script>
-  const menuToggle = document.querySelector(".navbar__menu-toggle");
-  const navbarLinks = document.querySelector(".navbar__links");
+  const menuToggle = document.querySelector('.navbar__menu-toggle');
+  const navbarLinks = document.querySelector('.navbar__links');
 
-  menuToggle?.addEventListener("click", () => {
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isExpanded));
-    navbarLinks?.classList.toggle("navbar__links--open");
+  menuToggle?.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+    navbarLinks?.classList.toggle('navbar__links--open');
   });
 </script>
 
@@ -269,11 +260,11 @@ import NavItem from "./NavItem.astro";
       display: flex;
     }
 
-    .navbar__menu-toggle[aria-expanded="true"] .navbar__menu-bar {
+    .navbar__menu-toggle[aria-expanded='true'] .navbar__menu-bar {
       display: none;
     }
 
-    .navbar__menu-toggle[aria-expanded="true"] .navbar__menu-close {
+    .navbar__menu-toggle[aria-expanded='true'] .navbar__menu-close {
       display: block;
     }
   }
