@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import PostCard from '../components/PostCard.astro';
+import Navbar from '../components/Navbar/Navbar';
 
 const posts = await getCollection('blog', ({ data }) => !data.draft);
 const recentPosts = posts
@@ -10,6 +11,8 @@ const recentPosts = posts
 ---
 
 <Layout title="Home" description="Welcome to my site">
+  <Navbar client:load />
+  
   <h1>Welcome</h1>
   <p>This is my site built with Astro and hosted on Cloudflare.</p>
   <p><a href="/blog">Read the Blog</a></p>

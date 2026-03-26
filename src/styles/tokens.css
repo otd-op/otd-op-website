@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-hover-bg: #e6e6e6;
+  --color-border: #e6e6e6;
+  
+  /* Typography */
+  --font-family-nav: "Barlow Semi Condensed", system-ui, sans-serif;
+  --font-weight-bold: 700;
+  --font-size-nav: 20px;
+  --line-height-nav: 100%;
+  --letter-spacing-nav: 0;
+  
+  /* Icon sizes */
+  --icon-size-sm: 20px;
+  --icon-size-md: 24px;
+  
+  /* Layout */
+  --navbar-max-width: 1512px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}

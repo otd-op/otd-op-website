@@ -1,5 +1,6 @@
 # build output
 dist/
+storybook-static/
 
 # generated types
 .astro/
@@ -13,12 +14,20 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# testing
+coverage/
+
 # environment variables
 .env
 .env.production
+.env.local
 
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
+# IDE setting folders
 .idea/
+.vscode/
+*.swp
+*.swo
+*~

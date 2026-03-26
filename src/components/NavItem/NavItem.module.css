@@ -1,0 +1,24 @@
+@import "../../styles/tokens.css";
+
+.navItem {
+  font-family: var(--font-family-nav);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-nav);
+  line-height: var(--line-height-nav);
+  letter-spacing: var(--letter-spacing-nav);
+  color: var(--color-black);
+  text-decoration: none;
+  padding: 4px 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.navItem:hover {
+  background-color: var(--color-hover-bg);
+}
+
+.active {
+  background-color: var(--color-hover-bg);
+}
