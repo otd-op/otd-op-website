@@ -1,7 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
-import type { NavItem } from '../types/navigation';
 import { getLocaleFromPath } from '../i18n';
+import type { NavItem } from '../types/navigation';
 
 interface Props {
   title: string;
@@ -125,7 +125,6 @@ const locale = getLocaleFromPath(pathname);
   @media (max-width: 768px) {
     .container {
       max-width: 320px;
-      padding: 24px 16px;
     }
   }
 </style>
