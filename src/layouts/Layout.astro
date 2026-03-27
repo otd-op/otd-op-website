@@ -67,7 +67,12 @@ const { title, description, activeNav } = Astro.props;
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
+    font-weight: 700;
+    overflow-wrap: break-word;
+  }
+
   p {
     overflow-wrap: break-word;
   }
@@ -102,5 +107,19 @@ const { title, description, activeNav } = Astro.props;
   textarea,
   select {
     font: inherit;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 32px 0;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 320px;
+      padding: 24px 16px;
+    }
   }
 </style>

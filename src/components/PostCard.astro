@@ -17,7 +17,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 
 <article>
   <h2>
-    <a href={`/blog/${post.id}`}>{title}</a>
+    <a href={`/articles/${post.id}`}>{title}</a>
   </h2>
   <time datetime={pubDate.toISOString()}>{formattedDate}</time>
   {description && <p>{description}</p>}
