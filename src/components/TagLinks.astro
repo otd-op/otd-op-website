@@ -26,11 +26,12 @@ const { tags, locale } = Astro.props;
   .tag-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: var(--space-2);
   }
 
   .tag-link {
     text-decoration: none;
+    transition: text-decoration var(--transition-fast);
   }
 
   .tag-link:hover {

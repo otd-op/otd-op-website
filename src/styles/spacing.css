@@ -1,0 +1,25 @@
+/**
+ * Spacing Utilities
+ * CSS custom properties for spacing (8-point grid system)
+ * Import tokens.css to use these variables
+ */
+
+/* All spacing tokens are defined in tokens.css */
+/* Use them directly: var(--space-4), var(--space-6), etc. */
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: var(--container-max-mobile);
+  }
+}
