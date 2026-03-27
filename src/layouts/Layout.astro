@@ -7,12 +7,37 @@ interface Props {
   title: string;
   description?: string;
   activeNav?: NavItem;
+  ogImage?: string;
 }
 
-const { title, description, activeNav } = Astro.props;
+const { title, description, activeNav, ogImage } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const locale = getLocaleFromPath(pathname);
+const siteUrl = 'https://otd-op.org';
+const canonicalUrl = `${siteUrl}${pathname}`;
+const alternateLocale = locale === 'en' ? 'fr' : 'en';
+const alternatePath = pathname.replace(`/${locale}/`, `/${alternateLocale}/`);
+const alternateUrl = `${siteUrl}${alternatePath}`;
+
+const fullTitle = `${title} | Off The Defensive`;
+const defaultOgImage = `${siteUrl}/logo.jpg`;
+const ogImageUrl = ogImage || defaultOgImage;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Off The Defensive',
+  alternateName: 'Offensive Populaire',
+  url: siteUrl,
+  logo: `${siteUrl}/android-chrome-512x512.png`,
+  sameAs: ['https://instagram.com/otd_op'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'otd-to@proton.me',
+    contactType: 'general',
+  },
+};
 ---
 
 <!doctype html>
@@ -20,19 +45,59 @@ const locale = getLocaleFromPath(pathname);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Off The Defensive" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Special+Gothic:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>{title}</title>
+
+    <!-- Title and Description -->
+    <title>{fullTitle}</title>
     {description && <meta name="description" content={description} />}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Alternate Language -->
+    <link rel="alternate" hreflang={locale === 'en' ? 'en-CA' : 'fr-CA'} href={canonicalUrl} />
+    <link
+      rel="alternate"
+      hreflang={alternateLocale === 'en' ? 'en-CA' : 'fr-CA'}
+      href={alternateUrl}
+    />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en`} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={fullTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="Off The Defensive" />
+    <meta property="og:locale" content={locale === 'en' ? 'en_CA' : 'fr_CA'} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   </head>
   <body>
     <Navbar activeItem={activeNav} />
