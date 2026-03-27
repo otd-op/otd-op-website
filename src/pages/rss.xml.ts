@@ -1,21 +1,21 @@
 import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
-import { getCollection } from 'astro:content';
+import { getPublishedPosts, sortPostsByDate } from '../utils/content';
+import { ROUTES } from '../config/routes';
 
 export async function GET(context: APIContext) {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-
-  const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const posts = await getPublishedPosts();
+  const sortedPosts = sortPostsByDate(posts);
 
   return rss({
-    title: 'OTD Organization',
-    description: 'Latest articles, updates, and resources from OTD.',
-    site: context.site?.toString() || 'https://example.com',
+    title: 'Off the Defensive',
+    description: 'Latest articles from OTD.',
+    site: context.site?.toString() || 'https://otd-op.org',
     items: sortedPosts.map(post => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/articles/${post.id}/`,
+      link: ROUTES.article(post.id),
       author: post.data.author,
     })),
     customData: `<language>en-us</language>`,
