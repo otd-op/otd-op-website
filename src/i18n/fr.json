@@ -7,13 +7,13 @@
   },
   "home": {
     "title": "Accueil",
-    "description": "Bienvenue chez Off The Defensive",
+    "description": "Offensive Populaire / Off The Defensive est une organisation de lutte de classes qui unit des organisateurs de quartier à travers le Canada pour lutter pour le pouvoir de la classe ouvrière.",
     "sectionTitle": "OFF THE DEFENSIVE",
     "sectionContent": "lorem ipsum"
   },
   "about": {
     "title": "À Propos",
-    "description": "À propos de Off The Defensive",
+    "description": "Découvrez Offensive Populaire, une organisation de lutte de classes pancanadienne qui unit des organisateurs de quartier pour surmonter le localisme et bâtir le pouvoir de la classe ouvrière.",
     "hero": "Organisateurs de Quartier S'Unissent pour Former une Organisation Pan-Canadienne",
     "intro": {
       "paragraph1": "Le 31 août 2025, des organisateurs de quartier de partout au Canada se sont rassemblés à Toronto pour la «Conférence Off the Defensive», où nous avons fondé une organisation: <strong>Off The Defensive / Offensive Populaire (OTD / OP).</strong>",
@@ -50,7 +50,7 @@
   },
   "documents": {
     "title": "Documents",
-    "description": "Documents",
+    "description": "Téléchargez les matériaux organisationnels d'Offensive Populaire.",
     "heading": "Nous travaillons dessus",
     "message": "Nous sommes sur la défensive pour celui-ci.",
     "downloadHeading": "TÉLÉCHARGER LES DOCUMENTS",
@@ -85,7 +85,7 @@
   },
   "join": {
     "title": "Rejoindre",
-    "description": "Rejoignez-nous",
+    "description": "Rejoignez Offensive Populaire et organisez avec les communautés ouvrières à travers le Canada pour la lutte de classes et l'organisation de quartier.",
     "heading": "CONTACTEZ-NOUS",
     "message": "Intéressé à rejoindre ou à en savoir plus sur OTD / OP? Nous serions ravis de vous entendre.",
     "contactPrefix": "Vous pouvez nous contacter par courriel à",
