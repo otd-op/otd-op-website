@@ -1,9 +1,10 @@
+import type { Linter } from 'eslint';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import globals from 'globals';
 
-export default [
+const config: Linter.Config[] = [
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
@@ -37,3 +38,5 @@ export default [
     },
   },
 ];
+
+export default config;
