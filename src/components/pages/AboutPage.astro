@@ -17,45 +17,45 @@ const { locale } = Astro.props;
 >
   <main class="container">
     <section class="hero">
-      <h1 class="hero-line">{t(locale, 'about.hero')}</h1>
+      <h1 class="hero-line text-heading-1">{t(locale, 'about.hero')}</h1>
     </section>
 
     <section class="intro">
-      <p set:html={t(locale, 'about.intro.paragraph1')} />
-      <p>{t(locale, 'about.intro.paragraph2')}</p>
+      <p class="text-body" set:html={t(locale, 'about.intro.paragraph1')} />
+      <p class="text-body">{t(locale, 'about.intro.paragraph2')}</p>
     </section>
 
     <section class="class-struggle">
-      <h2>{t(locale, 'about.classStruggle.heading')}</h2>
-      <p set:html={t(locale, 'about.classStruggle.paragraph1')} />
-      <p>{t(locale, 'about.classStruggle.paragraph2')}</p>
+      <h2 class="text-heading-2">{t(locale, 'about.classStruggle.heading')}</h2>
+      <p class="text-body" set:html={t(locale, 'about.classStruggle.paragraph1')} />
+      <p class="text-body">{t(locale, 'about.classStruggle.paragraph2')}</p>
     </section>
 
     <section class="localism">
-      <h2>{t(locale, 'about.localism.heading')}</h2>
-      <p>{t(locale, 'about.localism.paragraph1')}</p>
-      <p set:html={t(locale, 'about.localism.paragraph2')} />
-      <p set:html={t(locale, 'about.localism.paragraph3')} />
+      <h2 class="text-heading-2">{t(locale, 'about.localism.heading')}</h2>
+      <p class="text-body">{t(locale, 'about.localism.paragraph1')}</p>
+      <p class="text-body" set:html={t(locale, 'about.localism.paragraph2')} />
+      <p class="text-body" set:html={t(locale, 'about.localism.paragraph3')} />
     </section>
 
     <section class="overcoming">
-      <h2>{t(locale, 'about.overcoming.heading')}</h2>
-      <p>{t(locale, 'about.overcoming.paragraph1')}</p>
-      <p>{t(locale, 'about.overcoming.paragraph2')}</p>
-      <p>{t(locale, 'about.overcoming.paragraph3')}</p>
+      <h2 class="text-heading-2">{t(locale, 'about.overcoming.heading')}</h2>
+      <p class="text-body">{t(locale, 'about.overcoming.paragraph1')}</p>
+      <p class="text-body">{t(locale, 'about.overcoming.paragraph2')}</p>
+      <p class="text-body">{t(locale, 'about.overcoming.paragraph3')}</p>
     </section>
 
     <section class="socialism">
-      <h2>{t(locale, 'about.socialism.heading')}</h2>
-      <p set:html={t(locale, 'about.socialism.paragraph1')} />
-      <p>{t(locale, 'about.socialism.paragraph2')}</p>
+      <h2 class="text-heading-2">{t(locale, 'about.socialism.heading')}</h2>
+      <p class="text-body" set:html={t(locale, 'about.socialism.paragraph1')} />
+      <p class="text-body">{t(locale, 'about.socialism.paragraph2')}</p>
     </section>
 
     <section class="struggle">
-      <h2>{t(locale, 'about.struggle.heading')}</h2>
-      <p>{t(locale, 'about.struggle.paragraph1')}</p>
-      <p>{t(locale, 'about.struggle.paragraph2')}</p>
-      <p>{t(locale, 'about.struggle.paragraph3')}</p>
+      <h2 class="text-heading-2">{t(locale, 'about.struggle.heading')}</h2>
+      <p class="text-body">{t(locale, 'about.struggle.paragraph1')}</p>
+      <p class="text-body">{t(locale, 'about.struggle.paragraph2')}</p>
+      <p class="text-body">{t(locale, 'about.struggle.paragraph3')}</p>
     </section>
   </main>
 </Layout>
@@ -64,39 +64,18 @@ const { locale } = Astro.props;
   .container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--space-6);
   }
 
   section {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
   }
 
   .hero {
     gap: 0;
-    margin-bottom: 8px;
-  }
-
-  .hero-line {
-    font-size: 32px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
-    font-weight: 700;
-  }
-
-  h2 {
-    font-size: 24px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
-    font-weight: 700;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 20px;
+    margin-bottom: var(--space-2);
   }
 
   :global(strong) {

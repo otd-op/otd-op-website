@@ -48,19 +48,19 @@ const documents = [
 >
   <main class="container">
     <div class="documents-container">
-      <h2 class="documents-heading">{downloadHeading}</h2>
+      <h2 class="documents-heading text-heading-1">{downloadHeading}</h2>
 
       <ul class="documents-list">
         {
           documents.map((doc, index) => (
             <li class="document-item">
               <div class="document-header">
-                <span class="document-name">{doc.name}</span>
-                <a href={doc.file} class="document-download" download>
+                <span class="document-name text-body-medium">{doc.name}</span>
+                <a href={doc.file} class="document-download text-body-medium" download>
                   {downloadText}
                 </a>
               </div>
-              <p class="document-description">{doc.description}</p>
+              <p class="document-description text-body">{doc.description}</p>
               {index < documents.length - 1 && <hr class="document-divider" />}
             </li>
           ))
@@ -74,74 +74,57 @@ const documents = [
   .documents-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
   }
 
   .documents-heading {
-    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    color: #000;
     margin: 0;
   }
 
   .documents-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
   }
 
   .document-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: var(--space-1);
   }
 
   .document-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 8px;
+    gap: var(--space-2);
   }
 
   .document-name {
-    font-family: 'Special Gothic', system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000;
     flex: 1;
+    color: var(--color-text-primary);
   }
 
   .document-download {
-    font-family: 'Special Gothic', system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #6d6d6d;
-    text-decoration: underline;
-    text-decoration-style: solid;
     white-space: nowrap;
+    text-decoration: underline;
+    color: var(--color-text-secondary);
     cursor: pointer;
+    transition: color var(--transition-fast);
   }
 
   .document-download:hover {
-    color: #000;
+    color: var(--color-text-primary);
   }
 
   .document-description {
-    font-family: 'Special Gothic', system-ui, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000;
     margin: 0;
+    color: var(--color-text-primary);
   }
 
   .document-divider {
     border: none;
-    border-top: 1px solid #e6e6e6;
-    margin-top: 16px;
+    border-top: var(--border-width-thin) solid var(--color-border-light);
+    margin-top: var(--space-4);
   }
 </style>

@@ -9,7 +9,7 @@ const { label, href, isActive } = Astro.props;
 ---
 
 <li class="navbar__link-item">
-  <a href={href} class:list={['navbar__link', { 'navbar__link--active': isActive }]}>
+  <a href={href} class:list={['navbar__link text-ui', { 'navbar__link--active': isActive }]}>
     {label}
   </a>
 </li>
@@ -22,33 +22,30 @@ const { label, href, isActive } = Astro.props;
   }
 
   .navbar__link {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1;
-    color: #000;
-    text-decoration: none;
     white-space: nowrap;
-    padding: 6px;
+    padding: var(--space-1);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast);
   }
 
   .navbar__link:hover,
   .navbar__link--active {
-    background-color: transparent;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-interactive-bg);
+    color: var(--color-interactive-text);
   }
 
   @media (max-width: 768px) {
     .navbar__link-item {
       padding: 0;
       width: 100%;
-      border-bottom: 1px solid #000;
+      border-bottom: var(--border-width-thin) solid var(--color-border);
     }
 
     .navbar__link {
-      font-size: 20px;
-      padding: 24px 8px;
+      padding: var(--space-6) var(--space-2);
       width: 100%;
       text-align: center;
     }
