@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import type { Locale } from '../../i18n';
+import { t } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<Layout
+  title={t(locale, 'documents.title')}
+  description={t(locale, 'documents.description')}
+  activeNav="documents"
+>
+  <main class="container">
+    <h1>{t(locale, 'documents.heading')}</h1>
+    <p>{t(locale, 'documents.message')}</p>
+  </main>
+</Layout>

@@ -1,0 +1,80 @@
+---
+import InstagramIcon from '../assets/instagram.svg';
+import RssIcon from '../assets/rss.svg';
+import { ROUTES } from '../config/routes';
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props {
+  class?: string;
+  locale?: Locale;
+}
+
+const { class: className, locale = 'en' } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const otherLocale = locale === 'en' ? 'fr' : 'en';
+const otherLocaleUrl = pathname.replace(/^\/(en|fr)/, `/${otherLocale}`);
+const otherLocaleLabel = otherLocale === 'en' ? 'EN' : 'FR';
+---
+
+<div class={className}>
+  <a
+    href={ROUTES.instagram}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="icon-btn"
+    aria-label={t(locale, 'social.instagram')}
+  >
+    <InstagramIcon />
+  </a>
+  <a href={ROUTES.rss} class="icon-btn" aria-label={t(locale, 'social.rss')}>
+    <RssIcon />
+  </a>
+  <a href={otherLocaleUrl} class="lang-toggle" aria-label={`Switch to ${otherLocaleLabel}`}>
+    {otherLocaleLabel}
+  </a>
+</div>
+
+<style>
+  div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  .icon-btn :global(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .lang-toggle {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+    text-decoration: none;
+    padding: 6px;
+    white-space: nowrap;
+  }
+
+  .lang-toggle:hover {
+    background-color: #000;
+    color: #fff;
+  }
+</style>

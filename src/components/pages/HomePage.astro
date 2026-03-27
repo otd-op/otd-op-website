@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InstagramEmbed from '../../components/InstagramEmbed.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import type { Locale } from '../../i18n';
+import { t } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const sections = [
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+];
+---
+
+<Layout title={t(locale, 'home.title')} description={t(locale, 'home.description')}>
+  <main class="home container">
+    <!-- Hero Placeholder -->
+    <div class="home__hero">
+      <div class="placeholder placeholder--hero"></div>
+    </div>
+
+    <!-- Content Sections -->
+    {sections.map(section => <ContentSection title={section.title} content={section.content} />)}
+
+    <!-- Instagram Embed -->
+    <div class="home__instagram">
+      <InstagramEmbed />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .home {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .home__hero {
+    width: 100%;
+  }
+
+  .placeholder {
+    background-color: #e8e8e8;
+    width: 100%;
+  }
+
+  .placeholder--hero {
+    aspect-ratio: 16 / 9;
+    min-height: 350px;
+  }
+
+  .home__instagram {
+    width: 100%;
+  }
+
+  .home__instagram :global(blockquote) {
+    margin: 0;
+    width: 100% !important;
+  }
+</style>

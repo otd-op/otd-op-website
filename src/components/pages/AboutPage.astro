@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import type { Locale } from '../../i18n';
+import { t } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<Layout
+  title={t(locale, 'about.title')}
+  description={t(locale, 'about.description')}
+  activeNav="about"
+>
+  <main class="container">
+    <h1>{t(locale, 'about.heading')}</h1>
+
+    <p>{t(locale, 'about.paragraph1')}</p>
+
+    <p>{t(locale, 'about.paragraph2')}</p>
+
+    <p>{t(locale, 'about.paragraph3')}</p>
+
+    <p>{t(locale, 'about.paragraph4')}</p>
+
+    <p>{t(locale, 'about.paragraph5')}</p>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+</style>
