@@ -18,5 +18,13 @@ const { locale } = Astro.props;
   <main class="container">
     <h1>{t(locale, 'join.heading')}</h1>
     <p>{t(locale, 'join.message')}</p>
+    <p>{t(locale, 'join.contactPrefix')} <strong><u>{t(locale, 'join.email')}</u></strong></p>
+    <p>
+      {t(locale, 'join.protonText')}
+      <strong
+        ><u><a href="https://proton.me" target="_blank" rel="noopener noreferrer">ProtonMail</a></u
+        ></strong
+      >.
+    </p>
   </main>
 </Layout>

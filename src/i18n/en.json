@@ -3,7 +3,7 @@
     "articles": "ARTICLES 🚧",
     "documents": "DOCUMENTS",
     "about": "ABOUT",
-    "join": "JOIN! 🚧"
+    "join": "JOIN!"
   },
   "home": {
     "title": "Home",
@@ -86,8 +86,11 @@
   "join": {
     "title": "Join",
     "description": "Join us",
-    "heading": "We're working on it",
-    "message": "We're on the defensive for this one."
+    "heading": "GET IN TOUCH",
+    "message": "Interested in joining or learning more about OTD / OP? We'd love to hear from you.",
+    "contactPrefix": "You can reach us by emailing",
+    "email": "otd-to {at} proton.me",
+    "protonText": "We highly recommend using an encrypted email service like"
   },
   "articles": {
     "title": "Articles",
