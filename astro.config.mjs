@@ -8,6 +8,16 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://otd-op.org',
   adapter: cloudflare(),
-  output: 'static',
+  output: 'server',
   integrations: [sitemap()],
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
+  redirects: {
+    '/': '/en',
+  },
 });

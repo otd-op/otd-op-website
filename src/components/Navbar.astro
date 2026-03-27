@@ -1,5 +1,6 @@
 ---
 import type { NavItem } from '../types/navigation';
+import { getLocaleFromPath, t } from '../i18n';
 
 interface Props {
   activeItem?: NavItem;
@@ -7,11 +8,14 @@ interface Props {
 
 const { activeItem } = Astro.props;
 
+const pathname = Astro.url.pathname;
+const locale = getLocaleFromPath(pathname);
+
 const navItems = [
-  { label: 'ARTICLES 🚧', href: '/articles', id: 'articles' },
-  { label: 'DOCUMENTS 🚧', href: '/documents', id: 'documents' },
-  { label: 'ABOUT 🚧', href: '/about', id: 'about' },
-  { label: 'JOIN! 🚧', href: '/join', id: 'join' },
+  { label: t(locale, 'nav.articles'), href: `/${locale}/articles`, id: 'articles' },
+  { label: t(locale, 'nav.documents'), href: `/${locale}/documents`, id: 'documents' },
+  { label: t(locale, 'nav.about'), href: `/${locale}/about`, id: 'about' },
+  { label: t(locale, 'nav.join'), href: `/${locale}/join`, id: 'join' },
 ];
 
 import Logo from '../assets/logo.svg';
@@ -23,7 +27,7 @@ import SocialLinks from './SocialLinks.astro';
 <nav class="navbar">
   <div class="navbar__container">
     <div class="navbar__logo">
-      <a href="/" aria-label="Home">
+      <a href={`/${locale}`} aria-label={t(locale, 'aria.home')}>
         <Logo />
       </a>
     </div>
@@ -35,15 +39,19 @@ import SocialLinks from './SocialLinks.astro';
         ))
       }
       <li class="navbar__mobile-actions">
-        <SocialLinks />
+        <SocialLinks locale={locale} />
       </li>
     </ul>
 
     <div class="navbar__actions">
-      <SocialLinks />
+      <SocialLinks locale={locale} />
     </div>
 
-    <button class="navbar__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button
+      class="navbar__menu-toggle"
+      aria-label={t(locale, 'aria.toggleMenu')}
+      aria-expanded="false"
+    >
       <span class="navbar__menu-bar"></span>
       <span class="navbar__menu-bar"></span>
       <span class="navbar__menu-bar"></span>

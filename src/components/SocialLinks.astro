@@ -2,12 +2,15 @@
 import InstagramIcon from '../assets/instagram.svg';
 import RssIcon from '../assets/rss.svg';
 import { ROUTES } from '../config/routes';
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
 
 interface Props {
   class?: string;
+  locale?: Locale;
 }
 
-const { class: className } = Astro.props;
+const { class: className, locale = 'en' } = Astro.props;
 ---
 
 <div class={className}>
@@ -16,11 +19,11 @@ const { class: className } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
     class="icon-btn"
-    aria-label="Instagram"
+    aria-label={t(locale, 'social.instagram')}
   >
     <InstagramIcon />
   </a>
-  <a href={ROUTES.rss} class="icon-btn" aria-label="RSS Feed">
+  <a href={ROUTES.rss} class="icon-btn" aria-label={t(locale, 'social.rss')}>
     <RssIcon />
   </a>
 </div>

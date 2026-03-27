@@ -1,11 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getLocaleFromPath, t } from '../../i18n';
+
+const pathname = Astro.url.pathname;
+const locale = getLocaleFromPath(pathname);
 ---
 
-<Layout title="Articles" description="All blog posts" activeNav="articles">
+<Layout
+  title={t(locale, 'articles.title')}
+  description={t(locale, 'articles.description')}
+  activeNav="articles"
+>
   <main class="container">
-    <h1>We're working on it</h1>
-    <p>We're on the defensive for this one.</p>
+    <h1>{t(locale, 'articles.heading')}</h1>
+    <p>{t(locale, 'articles.message')}</p>
   </main>
 </Layout>
 
