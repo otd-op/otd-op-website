@@ -1,25 +1,116 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import PostCard from '../components/PostCard.astro';
-
-const posts = await getCollection('blog', ({ data }) => !data.draft);
-const recentPosts = posts
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 5);
+import InstagramEmbed from '../components/InstagramEmbed.astro';
 ---
 
-<Layout title="Home" description="Welcome to my site">
-  <h1>Welcome</h1>
-  <p>This is my site built with Astro and hosted on Cloudflare.</p>
-  <p><a href="/blog">Read the Blog</a></p>
+<Layout title="Home" description="Welcome to Off The Defensive">
+  <main class="home">
+    <div class="home__container">
+      <!-- Hero Placeholder -->
+      <div class="home__hero">
+        <div class="placeholder placeholder--hero"></div>
+      </div>
 
-  <h2>Recent Posts</h2>
-  {
-    recentPosts.length === 0 ? (
-      <p>No posts yet.</p>
-    ) : (
-      recentPosts.map(post => <PostCard post={post} />)
-    )
-  }
+      <!-- Content Sections -->
+      <section class="home__section">
+        <h2>OFF THE DEFENSIVE</h2>
+        <p>lorem ipsum</p>
+      </section>
+
+      <section class="home__section">
+        <h2>OFF THE DEFENSIVE</h2>
+        <p>lorem ipsum</p>
+      </section>
+
+      <section class="home__section">
+        <h2>OFF THE DEFENSIVE</h2>
+        <p>lorem ipsum</p>
+      </section>
+
+      <section class="home__section">
+        <h2>OFF THE DEFENSIVE</h2>
+        <p>lorem ipsum</p>
+      </section>
+
+      <section class="home__section">
+        <h2>OFF THE DEFENSIVE</h2>
+        <p>lorem ipsum</p>
+      </section>
+
+      <section class="home__section">
+        <h2>OFF THE DEFENSIVE</h2>
+        <p>lorem ipsum</p>
+      </section>
+
+      <!-- Instagram Embed -->
+      <div class="home__instagram">
+        <InstagramEmbed />
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  .home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+  }
+
+  .home__container {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .home__hero {
+    width: 100%;
+  }
+
+  .placeholder {
+    background-color: #e8e8e8;
+    width: 100%;
+  }
+
+  .placeholder--hero {
+    aspect-ratio: 16 / 9;
+    min-height: 350px;
+  }
+
+  .home__section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .home__section h2 {
+    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .home__instagram {
+    width: 100%;
+  }
+
+  .home__instagram :global(blockquote) {
+    margin: 0;
+    width: 100% !important;
+  }
+
+  @media (max-width: 768px) {
+    .home {
+      padding: 24px 16px;
+    }
+
+    .home__container {
+      max-width: 320px;
+    }
+  }
+</style>
