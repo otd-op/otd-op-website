@@ -1,13 +1,14 @@
 {
-  "css.customData": [".vscode/css-custom-data.json"],
-  "css.lint.unknownAtRules": "ignore",
-  "css.validate": true,
-  "cssVariables.lookupFiles": ["src/styles/tokens.css"],
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "editor.suggest.showColors": true,
-  "emmet.includeLanguages": {
-    "astro": "html"
-  }
+    "css.lint.unknownAtRules": "ignore",
+    "css.validate": true,
+    "cssVariables.lookupFiles": [
+        "src/styles/tokens.css"
+    ],
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.suggest.showColors": true,
+    "emmet.includeLanguages": {
+        "astro": "html"
+    }
 }
