@@ -1,7 +1,7 @@
 {
   "nav": {
     "articles": "ARTICLES 🚧",
-    "documents": "DOCUMENTS 🚧",
+    "documents": "DOCUMENTS",
     "about": "À PROPOS",
     "join": "REJOIGNEZ! 🚧"
   },
@@ -52,7 +52,36 @@
     "title": "Documents",
     "description": "Documents",
     "heading": "Nous travaillons dessus",
-    "message": "Nous sommes sur la défensive pour celui-ci."
+    "message": "Nous sommes sur la défensive pour celui-ci.",
+    "downloadHeading": "TÉLÉCHARGER LES DOCUMENTS",
+    "download": "Télécharger",
+    "list": [
+      {
+        "name": "Nom du Document",
+        "description": "Brève description du document.",
+        "file": "/documents/document-1.pdf"
+      },
+      {
+        "name": "Nom du Document",
+        "description": "Brève description du document.",
+        "file": "/documents/document-2.pdf"
+      },
+      {
+        "name": "Nom du Document",
+        "description": "Brève description du document.",
+        "file": "/documents/document-3.pdf"
+      },
+      {
+        "name": "Nom du Document",
+        "description": "Brève description du document.",
+        "file": "/documents/document-4.pdf"
+      },
+      {
+        "name": "Nom du Document",
+        "description": "Brève description du document.",
+        "file": "/documents/document-5.pdf"
+      }
+    ]
   },
   "join": {
     "title": "Rejoindre",
