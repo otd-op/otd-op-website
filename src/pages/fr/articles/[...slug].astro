@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
-import PostLayout from '../../layouts/PostLayout.astro';
-import { getPublishedPosts } from '../../utils/content';
+import PostLayout from '../../../layouts/PostLayout.astro';
+import { getPublishedPosts } from '../../../utils/content';
 
 export async function getStaticPaths() {
   const posts = await getPublishedPosts();
@@ -16,6 +16,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<PostLayout post={post}>
+<PostLayout post={post} locale="fr">
   <Content />
 </PostLayout>

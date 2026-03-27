@@ -3,12 +3,14 @@ import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '../utils/date';
 import { ROUTES } from '../config/routes';
 import TagLinks from './TagLinks.astro';
+import type { Locale } from '../i18n';
 
 interface Props {
   post: CollectionEntry<'blog'>;
+  locale: Locale;
 }
 
-const { post } = Astro.props;
+const { post, locale } = Astro.props;
 const { title, description, pubDate, tags } = post.data;
 
 const formattedDate = formatDate(pubDate, 'short');
@@ -16,9 +18,9 @@ const formattedDate = formatDate(pubDate, 'short');
 
 <article>
   <h2>
-    <a href={ROUTES.article(post.id)}>{title}</a>
+    <a href={ROUTES.article(locale, post.id)}>{title}</a>
   </h2>
   <time datetime={pubDate.toISOString()}>{formattedDate}</time>
   {description && <p>{description}</p>}
-  <TagLinks tags={tags} />
+  <TagLinks tags={tags} locale={locale} />
 </article>
