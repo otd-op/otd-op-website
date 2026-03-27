@@ -46,5 +46,9 @@
   "aria": {
     "home": "Home",
     "toggleMenu": "Toggle menu"
+  },
+  "tag": {
+    "title": "Posts tagged #{tag}",
+    "allPosts": "← All posts"
   }
 }
