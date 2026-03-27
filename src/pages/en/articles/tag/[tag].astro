@@ -1,8 +1,8 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import PostCard from '../../../components/PostCard.astro';
-import { getPublishedPosts, sortPostsByDate, extractUniqueTags } from '../../../utils/content';
-import { ROUTES } from '../../../config/routes';
+import Layout from '../../../../layouts/Layout.astro';
+import PostCard from '../../../../components/PostCard.astro';
+import { getPublishedPosts, sortPostsByDate, extractUniqueTags } from '../../../../utils/content';
+import { ROUTES } from '../../../../config/routes';
 
 export async function getStaticPaths() {
   const posts = await getPublishedPosts();
