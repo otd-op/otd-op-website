@@ -7,13 +7,13 @@
   },
   "home": {
     "title": "Home",
-    "description": "Welcome to Off The Defensive",
+    "description": "Off The Defensive / Offensive Populaire is a class-struggle organization uniting neighbourhood organizers across Canada to fight for working-class power.",
     "sectionTitle": "OFF THE DEFENSIVE",
     "sectionContent": "lorem ipsum"
   },
   "about": {
     "title": "About",
-    "description": "About Off The Defensive",
+    "description": "Learn about Off The Defensive, a Canada-wide class-struggle organization uniting neighbourhood organizers to overcome localism and build working-class power.",
     "hero": "Neighbourhood Organizers Unite to Form Canada-Wide Organization",
     "intro": {
       "paragraph1": "On August 31, 2025 neighbourhood organizers from across Canada got together in Toronto for the 'Off the Defensive Conference,' where we founded an organization: <strong>Off The Defensive / Offensive Populaire (OTD / OP).</strong>",
@@ -50,7 +50,7 @@
   },
   "documents": {
     "title": "Documents",
-    "description": "Documents",
+    "description": "Download organizational materials from Off The Defensive.",
     "heading": "We're working on it",
     "message": "We're on the defensive for this one.",
     "downloadHeading": "DOWNLOAD DOCUMENTS",
@@ -85,7 +85,7 @@
   },
   "join": {
     "title": "Join",
-    "description": "Join us",
+    "description": "Join Off The Defensive and organize with working-class communities across Canada for class struggle and neighbourhood organizing.",
     "heading": "GET IN TOUCH",
     "message": "Interested in joining or learning more about OTD / OP? We'd love to hear from you.",
     "contactPrefix": "You can reach us by emailing",
