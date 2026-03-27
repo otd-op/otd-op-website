@@ -2,7 +2,7 @@
   "nav": {
     "articles": "ARTICLES 🚧",
     "documents": "DOCUMENTS 🚧",
-    "about": "À PROPOS 🚧",
+    "about": "À PROPOS",
     "join": "REJOIGNEZ! 🚧"
   },
   "home": {
@@ -14,12 +14,39 @@
   "about": {
     "title": "À Propos",
     "description": "À propos de Off The Defensive",
-    "heading": "À Propos de Off The Defensive",
-    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus molestie neque, in faucibus enim ornare vitae. Cras in justo feugiat, auctor arcu vel, interdum urna. Sed eu tristique sapien, sit amet scelerisque erat. Fusce vel lorem in quam dapibus convallis in nec nibh. Nulla sit amet tempor lectus. In rutrum lectus eu urna dignissim ullamcorper. Phasellus et libero in metus tincidunt blandit nec at ipsum. Praesent gravida eros efficitur mi feugiat cursus. Aliquam maximus nibh nec ultricies euismod. Cras consectetur vulputate hendrerit. In vestibulum mattis libero, id pulvinar nibh rutrum vitae. Aliquam imperdiet eros ut justo interdum aliquet. Fusce bibendum, libero sit amet venenatis maximus, diam dui tempor lectus, eu faucibus felis lacus non leo. Maecenas nec libero congue, scelerisque ex quis, gravida turpis.",
-    "paragraph2": "Cras pulvinar purus quis lacus ullamcorper feugiat. Sed tincidunt dignissim erat. Sed tempor erat id velit ultricies eleifend. Donec bibendum bibendum purus nec vulputate. Quisque molestie vulputate cursus. Sed tristique pharetra felis, at luctus lacus elementum ac. Sed neque tellus, tristique ac purus non, faucibus porttitor ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam malesuada posuere justo, in euismod massa egestas vel. Maecenas bibendum libero justo, ac elementum ante vestibulum sit amet.",
-    "paragraph3": "Quisque pulvinar risus et sagittis ullamcorper. Vivamus lorem ipsum, lobortis eget blandit sit amet, scelerisque eget orci. Proin quis rutrum lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus faucibus risus convallis ante pretium, sed sodales est pulvinar. Cras at feugiat velit, a semper nulla. Vestibulum nisi nibh, interdum ut molestie et, commodo id lectus. Nulla sed erat mi. Integer sed ullamcorper est, id malesuada est. Nulla sodales feugiat vehicula. Mauris egestas ligula sed mi venenatis, at pretium tellus fermentum. Suspendisse nec aliquet purus.",
-    "paragraph4": "Duis imperdiet ex eu ante vulputate fringilla. Duis nisl nibh, eleifend at diam id, lacinia placerat augue. Vestibulum orci nunc, tempor accumsan fringilla consectetur, porttitor a dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ac massa eleifend, commodo justo in, consequat velit. Proin consectetur dictum metus, et cursus lorem ultrices sit amet. Ut lacus leo, lacinia nec venenatis vel, ullamcorper sed velit. Sed sit amet felis aliquam, cursus nisi vel, tempor lorem. Phasellus fermentum eget nisl a porta. Proin varius nunc sit amet est tempus euismod.",
-    "paragraph5": "Duis tempus vehicula purus finibus sodales. Quisque sit amet viverra ante. Praesent aliquet orci tortor, ac porttitor massa aliquet id. Pellentesque ac ex congue, egestas dolor a, elementum odio. Etiam laoreet, mi et luctus tempor, mi tellus vehicula nibh, rhoncus consectetur libero felis pellentesque dolor. Donec egestas lorem lacus, eu porta ligula dictum nec. Aliquam erat volutpat. Suspendisse varius bibendum porta. Fusce et luctus mauris. Sed euismod nibh quis tincidunt venenatis. Suspendisse tristique, lectus et ornare condimentum, velit ligula sollicitudin ex, vel tempus velit erat quis mauris. Pellentesque viverra elit in elit scelerisque maximus."
+    "hero": "Organisateurs de Quartier S'Unissent pour Former une Organisation Pan-Canadienne",
+    "intro": {
+      "paragraph1": "Le 31 août 2025, des organisateurs de quartier de partout au Canada se sont rassemblés à Toronto pour la «Conférence Off the Defensive», où nous avons fondé une organisation: <strong>Off The Defensive / Offensive Populaire (OTD / OP).</strong>",
+      "paragraph2": "La conférence a attiré plus de 80 organisateurs de sept villes à travers le pays. La nouvelle organisation unit des membres d'une douzaine d'organisations de lutte de classes de quartiers, communautaires et de logement sous une seule bannière et pour une mission claire: s'unir et s'organiser pour la lutte de classes dans les quartiers à travers le Canada."
+    },
+    "classStruggle": {
+      "heading": "OTD / OP N'est Pas une Coalition, Groupe de Lobbying, ONG ou Fondation—",
+      "paragraph1": "mais une <em>organisation de lutte de classes</em> qui vise à partager les leçons de années de luttes de quartier de nos organisateurs. Nous aiguiserons nos compétences, développerons notre analyse et nous unirons autour d'une stratégie dans notre lutte commune pour libérer les communautés de la classe ouvrière des crises économiques et sociales, de l'exploitation et des oppressions du capitalisme.",
+      "paragraph2": "Nous visons à organiser nos quartiers pour toutes les luttes nécessaires, non seulement contre les propriétaires, mais contre tous les grands capitalistes et les bureaucrates gouvernementaux qui dirigent ce système misérable."
+    },
+    "localism": {
+      "heading": "Apprendre de l'Expérience Passée",
+      "paragraph1": "Un point d'unité ferme établi lors de la Conférence OTD était que pratiquement toutes les luttes locales auxquelles nous avons participé et qui se sont déroulées dans d'autres quartiers et régions du Canada au cours des cinq dernières années n'ont été en mesure que de confronter les manifestations locales de la classe dirigeante et du système capitaliste.",
+      "paragraph2": "Selon nous, la limitation critique de ces luttes locales, y compris celles auxquelles nous avons participé, est qu'elles manquaient à la fois d'une unité sur la stratégie, l'aspiration, la capacité ou la direction au-delà de l'immédiat.",
+      "paragraph3": "Nous appelons cette limitation le <em>localisme.</em> Surmonter cette limitation nécessite de développer une stratégie pour passer à <em>l'offensive.</em>"
+    },
+    "overcoming": {
+      "heading": "Surmonter le Localisme",
+      "paragraph1": "Nous n'avons, jusqu'à présent, combattu que les manifestations locales de nos ennemis et des problèmes: propriétaires locaux, politiciens, hommes d'affaires. Cependant, ces personnes ne sont pas isolées à nos quartiers et villes.",
+      "paragraph2": "Ils sont organisés dans des lobbys, des partis, des cartels, des associations commerciales et des chambres de commerce. Ces organisations leur permettent de bâtir une force et une influence non seulement à l'échelle de la ville, mais aussi régionalement, provincialement, nationale et souvent même internationalement.",
+      "paragraph3": "Si nous, les travailleurs de ce pays, n'avons pas notre propre mouvement capable d'unir les luttes, les personnes et les organisations des quartiers à travers le pays, nous ne pourrons jamais bâtir l'élan nécessaire pour affirmer enfin le vrai pouvoir de la classe ouvrière. Ainsi, nous devons non seulement continuer à bâtir nos luttes locales, mais aussi porter ces luttes au-delà de nos quartiers, au-delà de leurs secteurs d'activité étroits, et vers le développement d'organisations de lutte de classes qui survivent à leurs cycles éventuels de flux et de reflux."
+    },
+    "socialism": {
+      "heading": "Notre Horizon Stratégique est le Socialisme",
+      "paragraph1": "«Socialisme» ne sera pas un mot creux que nous brandissons dans l'abstrait, alors qu'en pratique nous essayons seulement d'adoucir les coups du capitalisme contre la classe ouvrière. Se battre pour le socialisme nous oblige à poser de sérieuses questions stratégiques. Nous voulons prendre ces questions au sérieux.",
+      "paragraph2": "Bien que nous ne puissions pas gagner seuls la lutte pour le socialisme dans nos quartiers, nous croyons que nos quartiers sont un front crucial dans cette lutte (aux côtés de nos lieux de travail)."
+    },
+    "struggle": {
+      "heading": "Notre Lutte est une Lutte de Classes",
+      "paragraph1": "Sortir des silos localisés et sectoriels, c'est aussi reconnaître la seule chose qui unit chacune des luttes auxquelles nous sommes confrontés: l'exploitation de classe.",
+      "paragraph2": "Nous devons exposer les conflits de classes entre les travailleurs et les élites qui sont à la racine de chaque combat que nous menons, et les connecter avec la lutte plus large vers le pouvoir de la classe ouvrière dans nos quartiers.",
+      "paragraph3": "Pour ce faire, chacun de nos chapitres est mandaté pour démarrer, diriger et soutenir activement les luttes de classes dans leurs communautés locales, ainsi que pour former et entretenir des Comités de Défense de Quartier qui peuvent maintenir ces luttes de classes. Nous recrutons actuellement de nouveaux membres, formons de nouveaux chapitres et entreprenons de nouvelles luttes dans nos quartiers. 5 chapitres, dans autant de villes, ont été formés suite à la conférence OTD et ont déjà commencé leurs activités locales."
+    }
   },
   "documents": {
     "title": "Documents",
