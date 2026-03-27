@@ -1,7 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import type { Locale } from '../../i18n';
 import { t } from '../../i18n';
+import Layout from '../../layouts/Layout.astro';
 
 interface Props {
   locale: Locale;
@@ -16,17 +16,47 @@ const { locale } = Astro.props;
   activeNav="about"
 >
   <main class="container">
-    <h1>{t(locale, 'about.heading')}</h1>
+    <section class="hero">
+      <h1 class="hero-line">{t(locale, 'about.hero')}</h1>
+    </section>
 
-    <p>{t(locale, 'about.paragraph1')}</p>
+    <section class="intro">
+      <p set:html={t(locale, 'about.intro.paragraph1')} />
+      <p>{t(locale, 'about.intro.paragraph2')}</p>
+    </section>
 
-    <p>{t(locale, 'about.paragraph2')}</p>
+    <section class="class-struggle">
+      <h2>{t(locale, 'about.classStruggle.heading')}</h2>
+      <p set:html={t(locale, 'about.classStruggle.paragraph1')} />
+      <p>{t(locale, 'about.classStruggle.paragraph2')}</p>
+    </section>
 
-    <p>{t(locale, 'about.paragraph3')}</p>
+    <section class="localism">
+      <h2>{t(locale, 'about.localism.heading')}</h2>
+      <p>{t(locale, 'about.localism.paragraph1')}</p>
+      <p set:html={t(locale, 'about.localism.paragraph2')} />
+      <p set:html={t(locale, 'about.localism.paragraph3')} />
+    </section>
 
-    <p>{t(locale, 'about.paragraph4')}</p>
+    <section class="overcoming">
+      <h2>{t(locale, 'about.overcoming.heading')}</h2>
+      <p>{t(locale, 'about.overcoming.paragraph1')}</p>
+      <p>{t(locale, 'about.overcoming.paragraph2')}</p>
+      <p>{t(locale, 'about.overcoming.paragraph3')}</p>
+    </section>
 
-    <p>{t(locale, 'about.paragraph5')}</p>
+    <section class="socialism">
+      <h2>{t(locale, 'about.socialism.heading')}</h2>
+      <p set:html={t(locale, 'about.socialism.paragraph1')} />
+      <p>{t(locale, 'about.socialism.paragraph2')}</p>
+    </section>
+
+    <section class="struggle">
+      <h2>{t(locale, 'about.struggle.heading')}</h2>
+      <p>{t(locale, 'about.struggle.paragraph1')}</p>
+      <p>{t(locale, 'about.struggle.paragraph2')}</p>
+      <p>{t(locale, 'about.struggle.paragraph3')}</p>
+    </section>
   </main>
 </Layout>
 
@@ -34,17 +64,46 @@ const { locale } = Astro.props;
   .container {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
   }
 
-  h1 {
-    font-size: 18px;
-    line-height: 1;
+  .hero {
+    gap: 0;
+    margin-bottom: 8px;
+  }
+
+  .hero-line {
+    font-size: 32px;
+    line-height: 1.2;
     text-transform: uppercase;
+    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
+    font-weight: 700;
   }
 
   p {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  :global(strong) {
+    font-weight: 700;
+  }
+
+  :global(em) {
+    font-style: italic;
   }
 </style>
