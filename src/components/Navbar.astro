@@ -21,7 +21,7 @@ const navItems = [
 import Logo from '../assets/logo.svg';
 import Divider from '../assets/divider.svg';
 import NavItemComponent from './NavItem.astro';
-import SocialLinks from './SocialLinks.astro';
+import Icons from './Icons.astro';
 ---
 
 <nav class="navbar">
@@ -39,12 +39,12 @@ import SocialLinks from './SocialLinks.astro';
         ))
       }
       <li class="navbar__mobile-actions">
-        <SocialLinks locale={locale} />
+        <Icons locale={locale} />
       </li>
     </ul>
 
     <div class="navbar__actions">
-      <SocialLinks locale={locale} />
+      <Icons locale={locale} />
     </div>
 
     <button

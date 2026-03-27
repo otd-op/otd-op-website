@@ -11,6 +11,12 @@ interface Props {
 }
 
 const { class: className, locale = 'en' } = Astro.props;
+
+// Get current URL path to generate alternate language URL
+const pathname = Astro.url.pathname;
+const otherLocale = locale === 'en' ? 'fr' : 'en';
+const otherLocaleUrl = pathname.replace(/^\/(en|fr)/, `/${otherLocale}`);
+const otherLocaleLabel = otherLocale === 'en' ? 'EN' : 'FR';
 ---
 
 <div class={className}>
@@ -25,6 +31,9 @@ const { class: className, locale = 'en' } = Astro.props;
   </a>
   <a href={ROUTES.rss} class="icon-btn" aria-label={t(locale, 'social.rss')}>
     <RssIcon />
+  </a>
+  <a href={otherLocaleUrl} class="lang-toggle" aria-label={`Switch to ${otherLocaleLabel}`}>
+    {otherLocaleLabel}
   </a>
 </div>
 
@@ -52,5 +61,21 @@ const { class: className, locale = 'en' } = Astro.props;
     width: 100%;
     height: 100%;
     display: block;
+  }
+
+  .lang-toggle {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+    text-decoration: none;
+    padding: 6px;
+    white-space: nowrap;
+  }
+
+  .lang-toggle:hover {
+    background-color: #000;
+    color: #fff;
   }
 </style>
