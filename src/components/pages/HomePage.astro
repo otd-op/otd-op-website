@@ -12,24 +12,34 @@ interface Props {
 const { locale } = Astro.props;
 
 const sections = [
-  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
-  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
-  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
-  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
-  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
-  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  {
+    title: t(locale, 'home.sections.whoWeAre.title'),
+    content: t(locale, 'home.sections.whoWeAre.content'),
+  },
+  {
+    title: t(locale, 'home.sections.classStruggle.title'),
+    content: t(locale, 'home.sections.classStruggle.content'),
+  },
+  {
+    title: t(locale, 'home.sections.overcomingLocalism.title'),
+    content: t(locale, 'home.sections.overcomingLocalism.content'),
+  },
+  {
+    title: t(locale, 'home.sections.joinUs.title'),
+    content: t(locale, 'home.sections.joinUs.content'),
+    href: `/${locale}/join`,
+  },
 ];
 ---
 
 <Layout title={t(locale, 'home.title')} description={t(locale, 'home.description')}>
   <main class="home container">
-    <!-- Hero Placeholder -->
-    <div class="home__hero">
-      <div class="placeholder placeholder--hero"></div>
-    </div>
-
     <!-- Content Sections -->
-    {sections.map(section => <ContentSection title={section.title} content={section.content} />)}
+    {
+      sections.map(section => (
+        <ContentSection title={section.title} content={section.content} href={section.href} />
+      ))
+    }
 
     <!-- Instagram Embed -->
     <div class="home__instagram">
@@ -67,5 +77,10 @@ const sections = [
   .home__instagram :global(blockquote) {
     margin: 0;
     width: 100% !important;
+  }
+
+  :global(.link-title) {
+    text-decoration: underline;
+    color: inherit;
   }
 </style>

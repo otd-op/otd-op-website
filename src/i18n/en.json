@@ -8,8 +8,24 @@
   "home": {
     "title": "Home",
     "description": "Off The Defensive / Offensive Populaire is a class-struggle organization uniting neighbourhood organizers across Canada to fight for working-class power.",
-    "sectionTitle": "OFF THE DEFENSIVE",
-    "sectionContent": "lorem ipsum"
+    "sections": {
+      "whoWeAre": {
+        "title": "WHO WE ARE",
+        "content": "Founded on August 31, 2025 at the Off the Defensive Conference in Toronto, OTD / OP is a Canada-wide class-struggle organization. We unite over 80 organizers from seven cities and nearly a dozen neighbourhood, community, and housing organizations under one banner."
+      },
+      "classStruggle": {
+        "title": "CLASS STRUGGLE ORGANIZATION",
+        "content": "We are not a coalition, lobbying group, NGO, or foundation. We are a class-struggle organization sharing lessons from years of neighbourhood struggles. We organize against landlords, big capitalists, and the government bureaucrats who rule this system."
+      },
+      "overcomingLocalism": {
+        "title": "OVERCOMING LOCALISM",
+        "content": "Our enemies are organized in lobbies, parties, and business associations at city, regional, provincial, national, and international levels. To build real working-class power, we must unite struggles beyond neighbourhoods and develop organizations that outlast their cycles."
+      },
+      "joinUs": {
+        "title": "JOIN US",
+        "content": "5 chapters have been formed across Canada since our founding conference, with new chapters forming and local activities already underway. Interested in joining or starting a chapter in your neighbourhood? We'd love to hear from you."
+      }
+    }
   },
   "about": {
     "title": "About",
