@@ -28,6 +28,7 @@ const { title, description, activeNav } = Astro.props;
     />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
     <Navbar activeItem={activeNav} />
