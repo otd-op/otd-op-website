@@ -18,7 +18,8 @@ const navItems = [
   { label: t(locale, 'nav.join'), href: `/${locale}/join`, id: 'join' },
 ];
 
-import Logo from '../assets/logo.svg';
+import LogoOTD from '../assets/logo-otd.svg';
+import LogoOP from '../assets/logo-op.svg';
 import Divider from '../assets/divider.svg';
 import NavItemComponent from './NavItem.astro';
 import Icons from './Icons.astro';
@@ -28,7 +29,7 @@ import Icons from './Icons.astro';
   <div class="navbar__container">
     <div class="navbar__logo">
       <a href={`/${locale}`} aria-label={t(locale, 'aria.home')}>
-        <Logo />
+        {locale === 'en' ? <LogoOTD /> : <LogoOP />}
       </a>
     </div>
 
