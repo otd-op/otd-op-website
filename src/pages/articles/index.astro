@@ -1,4 +1,15 @@
 ---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Articles" description="All blog posts" activeNav="articles">
+  <main class="container">
+    <h1>We're working on it</h1>
+    <p>We're on the defensive for this one.</p>
+  </main>
+</Layout>
+
+<!-- 
 import { getCollection } from 'astro:content';
 import PostCard from '../../components/PostCard.astro';
 import TagList from '../../components/TagList.astro';
@@ -10,7 +21,6 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
 
 <Layout title="Articles" description="All blog posts" activeNav="articles">
   <h1>Blog</h1>
-  <p><a href="/rss.xml">RSS Feed</a></p>
 
   {
     sortedPosts.length === 0 ? (
@@ -22,3 +32,4 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
 
   <TagList />
 </Layout>
+-->
