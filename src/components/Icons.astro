@@ -12,7 +12,6 @@ interface Props {
 
 const { class: className, locale = 'en' } = Astro.props;
 
-// Get current URL path to generate alternate language URL
 const pathname = Astro.url.pathname;
 const otherLocale = locale === 'en' ? 'fr' : 'en';
 const otherLocaleUrl = pathname.replace(/^\/(en|fr)/, `/${otherLocale}`);
