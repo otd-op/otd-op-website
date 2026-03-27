@@ -4,8 +4,7 @@ import InstagramEmbed from '../components/InstagramEmbed.astro';
 ---
 
 <Layout title="Home" description="Welcome to Off The Defensive">
-  <main class="home">
-    <div class="home__container">
+  <main class="home container">
       <!-- Hero Placeholder -->
       <div class="home__hero">
         <div class="placeholder placeholder--hero"></div>
@@ -46,21 +45,11 @@ import InstagramEmbed from '../components/InstagramEmbed.astro';
       <div class="home__instagram">
         <InstagramEmbed />
       </div>
-    </div>
   </main>
 </Layout>
 
 <style>
   .home {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 32px 0;
-  }
-
-  .home__container {
-    width: 100%;
-    max-width: 640px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -87,9 +76,7 @@ import InstagramEmbed from '../components/InstagramEmbed.astro';
   }
 
   .home__section h2 {
-    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
     font-size: 18px;
-    font-weight: 700;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -102,15 +89,5 @@ import InstagramEmbed from '../components/InstagramEmbed.astro';
   .home__instagram :global(blockquote) {
     margin: 0;
     width: 100% !important;
-  }
-
-  @media (max-width: 768px) {
-    .home {
-      padding: 24px 16px;
-    }
-
-    .home__container {
-      max-width: 320px;
-    }
   }
 </style>

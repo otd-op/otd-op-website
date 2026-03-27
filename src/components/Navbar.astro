@@ -7,9 +7,9 @@ const { activeItem } = Astro.props;
 
 const navItems = [
   { label: 'ABOUT', href: '/about', id: 'about' },
-  { label: 'ARTICLES', href: '/articles', id: 'articles' },
-  { label: 'DOCUMENTS', href: '/documents', id: 'documents' },
-  { label: 'JOIN!', href: '/join', id: 'join' },
+  { label: 'ARTICLES 🚧', href: '/articles', id: 'articles' },
+  { label: 'DOCUMENTS 🚧', href: '/documents', id: 'documents' },
+  { label: 'JOIN! 🚧', href: '/join', id: 'join' },
 ];
 
 import Logo from '../assets/logo.svg';
@@ -102,6 +102,7 @@ import NavItem from './NavItem.astro';
     justify-content: space-between;
     padding: 24px 64px;
     margin: 0 auto;
+    position: relative;
   }
 
   .navbar__logo {
@@ -125,6 +126,9 @@ import NavItem from './NavItem.astro';
     padding: 0;
     width: 640px;
     flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .navbar__actions {
@@ -208,6 +212,9 @@ import NavItem from './NavItem.astro';
 
     .navbar__links {
       width: 480px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -231,6 +238,7 @@ import NavItem from './NavItem.astro';
       margin: 0;
       padding: 0;
       z-index: 100;
+      transform: none;
     }
 
     .navbar__links--open {
