@@ -1,63 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getLocaleFromPath, t } from '../i18n';
+
+const pathname = Astro.url.pathname;
+const locale = getLocaleFromPath(pathname);
 ---
 
-<Layout title="About" description="About Off The Defensive" activeNav="about">
+<Layout
+  title={t(locale, 'about.title')}
+  description={t(locale, 'about.description')}
+  activeNav="about"
+>
   <main class="container">
-    <h1>About Off The Defensive</h1>
+    <h1>{t(locale, 'about.heading')}</h1>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus molestie neque, in
-      faucibus enim ornare vitae. Cras in justo feugiat, auctor arcu vel, interdum urna. Sed eu
-      tristique sapien, sit amet scelerisque erat. Fusce vel lorem in quam dapibus convallis in nec
-      nibh. Nulla sit amet tempor lectus. In rutrum lectus eu urna dignissim ullamcorper. Phasellus
-      et libero in metus tincidunt blandit nec at ipsum. Praesent gravida eros efficitur mi feugiat
-      cursus. Aliquam maximus nibh nec ultricies euismod. Cras consectetur vulputate hendrerit. In
-      vestibulum mattis libero, id pulvinar nibh rutrum vitae. Aliquam imperdiet eros ut justo
-      interdum aliquet. Fusce bibendum, libero sit amet venenatis maximus, diam dui tempor lectus,
-      eu faucibus felis lacus non leo. Maecenas nec libero congue, scelerisque ex quis, gravida
-      turpis.
-    </p>
+    <p>{t(locale, 'about.paragraph1')}</p>
 
-    <p>
-      Cras pulvinar purus quis lacus ullamcorper feugiat. Sed tincidunt dignissim erat. Sed tempor
-      erat id velit ultricies eleifend. Donec bibendum bibendum purus nec vulputate. Quisque
-      molestie vulputate cursus. Sed tristique pharetra felis, at luctus lacus elementum ac. Sed
-      neque tellus, tristique ac purus non, faucibus porttitor ex. Interdum et malesuada fames ac
-      ante ipsum primis in faucibus. Etiam malesuada posuere justo, in euismod massa egestas vel.
-      Maecenas bibendum libero justo, ac elementum ante vestibulum sit amet.
-    </p>
+    <p>{t(locale, 'about.paragraph2')}</p>
 
-    <p>
-      Quisque pulvinar risus et sagittis ullamcorper. Vivamus lorem ipsum, lobortis eget blandit sit
-      amet, scelerisque eget orci. Proin quis rutrum lorem. Orci varius natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus. Vivamus faucibus risus convallis ante pretium,
-      sed sodales est pulvinar. Cras at feugiat velit, a semper nulla. Vestibulum nisi nibh,
-      interdum ut molestie et, commodo id lectus. Nulla sed erat mi. Integer sed ullamcorper est, id
-      malesuada est. Nulla sodales feugiat vehicula. Mauris egestas ligula sed mi venenatis, at
-      pretium tellus fermentum. Suspendisse nec aliquet purus.
-    </p>
+    <p>{t(locale, 'about.paragraph3')}</p>
 
-    <p>
-      Duis imperdiet ex eu ante vulputate fringilla. Duis nisl nibh, eleifend at diam id, lacinia
-      placerat augue. Vestibulum orci nunc, tempor accumsan fringilla consectetur, porttitor a dui.
-      Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ac massa eleifend, commodo
-      justo in, consequat velit. Proin consectetur dictum metus, et cursus lorem ultrices sit amet.
-      Ut lacus leo, lacinia nec venenatis vel, ullamcorper sed velit. Sed sit amet felis aliquam,
-      cursus nisi vel, tempor lorem. Phasellus fermentum eget nisl a porta. Proin varius nunc sit
-      amet est tempus euismod.
-    </p>
+    <p>{t(locale, 'about.paragraph4')}</p>
 
-    <p>
-      Duis tempus vehicula purus finibus sodales. Quisque sit amet viverra ante. Praesent aliquet
-      orci tortor, ac porttitor massa aliquet id. Pellentesque ac ex congue, egestas dolor a,
-      elementum odio. Etiam laoreet, mi et luctus tempor, mi tellus vehicula nibh, rhoncus
-      consectetur libero felis pellentesque dolor. Donec egestas lorem lacus, eu porta ligula dictum
-      nec. Aliquam erat volutpat. Suspendisse varius bibendum porta. Fusce et luctus mauris. Sed
-      euismod nibh quis tincidunt venenatis. Suspendisse tristique, lectus et ornare condimentum,
-      velit ligula sollicitudin ex, vel tempus velit erat quis mauris. Pellentesque viverra elit in
-      elit scelerisque maximus.
-    </p>
+    <p>{t(locale, 'about.paragraph5')}</p>
   </main>
 </Layout>
 

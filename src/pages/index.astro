@@ -2,18 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import InstagramEmbed from '../components/InstagramEmbed.astro';
 import ContentSection from '../components/ContentSection.astro';
+import { getLocaleFromPath, t } from '../i18n';
+
+const pathname = Astro.url.pathname;
+const locale = getLocaleFromPath(pathname);
 
 const sections = [
-  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
-  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
-  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
-  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
-  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
-  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
+  { title: t(locale, 'home.sectionTitle'), content: t(locale, 'home.sectionContent') },
 ];
 ---
 
-<Layout title="Home" description="Welcome to Off The Defensive">
+<Layout title={t(locale, 'home.title')} description={t(locale, 'home.description')}>
   <main class="home container">
     <!-- Hero Placeholder -->
     <div class="home__hero">
