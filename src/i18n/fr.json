@@ -3,7 +3,7 @@
     "articles": "ARTICLES 🚧",
     "documents": "DOCUMENTS",
     "about": "À PROPOS",
-    "join": "REJOIGNEZ! 🚧"
+    "join": "REJOIGNEZ!"
   },
   "home": {
     "title": "Accueil",
@@ -86,8 +86,11 @@
   "join": {
     "title": "Rejoindre",
     "description": "Rejoignez-nous",
-    "heading": "Nous travaillons dessus",
-    "message": "Nous sommes sur la défensive pour celui-ci."
+    "heading": "CONTACTEZ-NOUS",
+    "message": "Intéressé à rejoindre ou à en savoir plus sur OTD / OP? Nous serions ravis de vous entendre.",
+    "contactPrefix": "Vous pouvez nous contacter par courriel à",
+    "email": "otd-to {at} proton.me",
+    "protonText": "Nous recommandons fortement d'utiliser un service de courriel chiffré comme"
   },
   "articles": {
     "title": "Articles",
