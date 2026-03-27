@@ -1,13 +1,44 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import type { Locale } from '../../i18n';
 import { t } from '../../i18n';
+import Layout from '../../layouts/Layout.astro';
 
 interface Props {
   locale: Locale;
 }
 
 const { locale } = Astro.props;
+
+const downloadHeading = t(locale, 'documents.downloadHeading');
+const downloadText = t(locale, 'documents.download');
+
+const documents = [
+  {
+    name: t(locale, 'documents.list.0.name'),
+    description: t(locale, 'documents.list.0.description'),
+    file: t(locale, 'documents.list.0.file'),
+  },
+  {
+    name: t(locale, 'documents.list.1.name'),
+    description: t(locale, 'documents.list.1.description'),
+    file: t(locale, 'documents.list.1.file'),
+  },
+  {
+    name: t(locale, 'documents.list.2.name'),
+    description: t(locale, 'documents.list.2.description'),
+    file: t(locale, 'documents.list.2.file'),
+  },
+  {
+    name: t(locale, 'documents.list.3.name'),
+    description: t(locale, 'documents.list.3.description'),
+    file: t(locale, 'documents.list.3.file'),
+  },
+  {
+    name: t(locale, 'documents.list.4.name'),
+    description: t(locale, 'documents.list.4.description'),
+    file: t(locale, 'documents.list.4.file'),
+  },
+];
 ---
 
 <Layout
@@ -16,7 +47,101 @@ const { locale } = Astro.props;
   activeNav="documents"
 >
   <main class="container">
-    <h1>{t(locale, 'documents.heading')}</h1>
-    <p>{t(locale, 'documents.message')}</p>
+    <div class="documents-container">
+      <h2 class="documents-heading">{downloadHeading}</h2>
+
+      <ul class="documents-list">
+        {
+          documents.map((doc, index) => (
+            <li class="document-item">
+              <div class="document-header">
+                <span class="document-name">{doc.name}</span>
+                <a href={doc.file} class="document-download" download>
+                  {downloadText}
+                </a>
+              </div>
+              <p class="document-description">{doc.description}</p>
+              {index < documents.length - 1 && <hr class="document-divider" />}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .documents-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .documents-heading {
+    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #000;
+    margin: 0;
+  }
+
+  .documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .document-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .document-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .document-name {
+    font-family: 'Special Gothic', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    flex: 1;
+  }
+
+  .document-download {
+    font-family: 'Special Gothic', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6d6d6d;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .document-download:hover {
+    color: #000;
+  }
+
+  .document-description {
+    font-family: 'Special Gothic', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    margin: 0;
+  }
+
+  .document-divider {
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 16px;
+  }
+</style>
