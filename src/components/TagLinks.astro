@@ -1,18 +1,20 @@
 ---
 import { ROUTES } from '../config/routes';
+import type { Locale } from '../i18n';
 
 interface Props {
   tags: string[];
+  locale: Locale;
 }
 
-const { tags } = Astro.props;
+const { tags, locale } = Astro.props;
 ---
 
 {
   tags.length > 0 && (
     <p class="tag-links">
       {tags.map(tag => (
-        <a href={ROUTES.tag(tag)} class="tag-link">
+        <a href={ROUTES.tag(locale, tag)} class="tag-link">
           #{tag}
         </a>
       ))}

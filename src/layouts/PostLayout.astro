@@ -3,12 +3,14 @@ import Layout from './Layout.astro';
 import type { CollectionEntry } from 'astro:content';
 import { formatDate } from '../utils/date';
 import TagLinks from '../components/TagLinks.astro';
+import type { Locale } from '../i18n';
 
 interface Props {
   post: CollectionEntry<'blog'>;
+  locale: Locale;
 }
 
-const { post } = Astro.props;
+const { post, locale } = Astro.props;
 const { title, description, pubDate, updatedDate, author, tags } = post.data;
 
 const formattedDate = formatDate(pubDate, 'long');
@@ -24,7 +26,7 @@ const formattedUpdated = updatedDate ? formatDate(updatedDate, 'long') : undefin
         {formattedUpdated && <span>(updated {formattedUpdated})</span>}
         <span>by {author}</span>
       </p>
-      <TagLinks tags={tags} />
+      <TagLinks tags={tags} locale={locale} />
     </header>
 
     <div>
