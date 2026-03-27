@@ -9,10 +9,10 @@ const { title, content, href } = Astro.props;
 ---
 
 <section class="home__section">
-  <h2>
+  <h2 class="text-heading-2">
     {
       href ? (
-        <a href={href} class="link-title">
+        <a href={href} class="link-title link-underline">
           {title}
         </a>
       ) : (
@@ -20,5 +20,13 @@ const { title, content, href } = Astro.props;
       )
     }
   </h2>
-  <p>{content}</p>
+  <p class="text-body">{content}</p>
 </section>
+
+<style>
+  .home__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+</style>

@@ -31,7 +31,7 @@ const otherLocaleLabel = otherLocale === 'en' ? 'EN' : 'FR';
   <a href={ROUTES.rss} class="icon-btn" aria-label={t(locale, 'social.rss')}>
     <RssIcon />
   </a>
-  <a href={otherLocaleUrl} class="lang-toggle" aria-label={`Switch to ${otherLocaleLabel}`}>
+  <a href={otherLocaleUrl} class="lang-toggle text-ui" aria-label={`Switch to ${otherLocaleLabel}`}>
     {otherLocaleLabel}
   </a>
 </div>
@@ -40,15 +40,15 @@ const otherLocaleLabel = otherLocale === 'en' ? 'EN' : 'FR';
   div {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--space-4);
   }
 
   .icon-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
     padding: 0;
     border: none;
     background: none;
@@ -63,18 +63,17 @@ const otherLocaleLabel = otherLocale === 'en' ? 'EN' : 'FR';
   }
 
   .lang-toggle {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1;
-    color: #000;
-    text-decoration: none;
-    padding: 6px;
     white-space: nowrap;
+    padding: var(--space-1);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast);
   }
 
   .lang-toggle:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-interactive-bg);
+    color: var(--color-interactive-text);
   }
 </style>

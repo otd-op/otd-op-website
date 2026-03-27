@@ -1,4 +1,5 @@
 ---
+import '../styles/index.css';
 import Navbar from '../components/Navbar.astro';
 import { getLocaleFromPath } from '../i18n';
 import type { NavItem } from '../types/navigation';
@@ -123,15 +124,10 @@ const organizationSchema = {
 
   body {
     min-height: 100vh;
-    line-height: 1.5;
-    font-family:
-      'Special Gothic',
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      sans-serif;
+    line-height: var(--line-height-normal);
+    font-family: var(--font-body);
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
   }
 
   h1,
@@ -140,7 +136,7 @@ const organizationSchema = {
   h4,
   h5,
   h6 {
-    font-family: 'Barlow Semi Condensed', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     overflow-wrap: break-word;
   }
@@ -179,18 +175,5 @@ const organizationSchema = {
   textarea,
   select {
     font: inherit;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 32px 0;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      max-width: 320px;
-    }
   }
 </style>
