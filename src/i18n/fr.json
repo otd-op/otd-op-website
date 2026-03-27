@@ -8,8 +8,24 @@
   "home": {
     "title": "Accueil",
     "description": "Offensive Populaire / Off The Defensive est une organisation de lutte de classes qui unit des organisateurs de quartier à travers le Canada pour lutter pour le pouvoir de la classe ouvrière.",
-    "sectionTitle": "OFF THE DEFENSIVE",
-    "sectionContent": "lorem ipsum"
+    "sections": {
+      "whoWeAre": {
+        "title": "QUI NOUS SOMMES",
+        "content": "Fondée le 31 août 2025 lors de la Conférence Off the Defensive à Toronto, OTD / OP est une organisation de lutte de classes pancanadienne. Nous unissons plus de 80 organisateurs de sept villes et près d'une douzaine d'organisations de quartiers, communautaires et de logement sous une même bannière."
+      },
+      "classStruggle": {
+        "title": "ORGANISATION DE LUTTE DE CLASSES",
+        "content": "Nous ne sommes pas une coalition, groupe de lobbying, ONG ou fondation. Nous sommes une organisation de lutte de classes partageant les leçons de années de luttes de quartier. Nous nous organisons contre les propriétaires, les grands capitalistes et les bureaucrates gouvernementaux qui dirigent ce système."
+      },
+      "overcomingLocalism": {
+        "title": "SURMONTER LE LOCALISME",
+        "content": "Nos ennemis sont organisés dans des lobbys, partis et associations commerciales aux niveaux municipal, régional, provincial, national et international. Pour bâtir un véritable pouvoir de la classe ouvrière, nous devons unir les luttes au-delà des quartiers et développer des organisations qui survivent à leurs cycles."
+      },
+      "joinUs": {
+        "title": "REJOIGNEZ-NOUS",
+        "content": "5 chapitres ont été formés à travers le Canada depuis notre conférence fondatrice, de nouveaux chapitres se forment et des activités locales sont déjà en cours. Intéressé à rejoindre ou à lancer un chapitre dans votre quartier? Nous serions ravis de vous entendre."
+      }
+    }
   },
   "about": {
     "title": "À Propos",
