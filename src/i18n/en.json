@@ -2,7 +2,7 @@
   "nav": {
     "articles": "ARTICLES 🚧",
     "documents": "DOCUMENTS 🚧",
-    "about": "ABOUT 🚧",
+    "about": "ABOUT",
     "join": "JOIN! 🚧"
   },
   "home": {
@@ -14,12 +14,39 @@
   "about": {
     "title": "About",
     "description": "About Off The Defensive",
-    "heading": "About Off The Defensive",
-    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus molestie neque, in faucibus enim ornare vitae. Cras in justo feugiat, auctor arcu vel, interdum urna. Sed eu tristique sapien, sit amet scelerisque erat. Fusce vel lorem in quam dapibus convallis in nec nibh. Nulla sit amet tempor lectus. In rutrum lectus eu urna dignissim ullamcorper. Phasellus et libero in metus tincidunt blandit nec at ipsum. Praesent gravida eros efficitur mi feugiat cursus. Aliquam maximus nibh nec ultricies euismod. Cras consectetur vulputate hendrerit. In vestibulum mattis libero, id pulvinar nibh rutrum vitae. Aliquam imperdiet eros ut justo interdum aliquet. Fusce bibendum, libero sit amet venenatis maximus, diam dui tempor lectus, eu faucibus felis lacus non leo. Maecenas nec libero congue, scelerisque ex quis, gravida turpis.",
-    "paragraph2": "Cras pulvinar purus quis lacus ullamcorper feugiat. Sed tincidunt dignissim erat. Sed tempor erat id velit ultricies eleifend. Donec bibendum bibendum purus nec vulputate. Quisque molestie vulputate cursus. Sed tristique pharetra felis, at luctus lacus elementum ac. Sed neque tellus, tristique ac purus non, faucibus porttitor ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam malesuada posuere justo, in euismod massa egestas vel. Maecenas bibendum libero justo, ac elementum ante vestibulum sit amet.",
-    "paragraph3": "Quisque pulvinar risus et sagittis ullamcorper. Vivamus lorem ipsum, lobortis eget blandit sit amet, scelerisque eget orci. Proin quis rutrum lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus faucibus risus convallis ante pretium, sed sodales est pulvinar. Cras at feugiat velit, a semper nulla. Vestibulum nisi nibh, interdum ut molestie et, commodo id lectus. Nulla sed erat mi. Integer sed ullamcorper est, id malesuada est. Nulla sodales feugiat vehicula. Mauris egestas ligula sed mi venenatis, at pretium tellus fermentum. Suspendisse nec aliquet purus.",
-    "paragraph4": "Duis imperdiet ex eu ante vulputate fringilla. Duis nisl nibh, eleifend at diam id, lacinia placerat augue. Vestibulum orci nunc, tempor accumsan fringilla consectetur, porttitor a dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc ac massa eleifend, commodo justo in, consequat velit. Proin consectetur dictum metus, et cursus lorem ultrices sit amet. Ut lacus leo, lacinia nec venenatis vel, ullamcorper sed velit. Sed sit amet felis aliquam, cursus nisi vel, tempor lorem. Phasellus fermentum eget nisl a porta. Proin varius nunc sit amet est tempus euismod.",
-    "paragraph5": "Duis tempus vehicula purus finibus sodales. Quisque sit amet viverra ante. Praesent aliquet orci tortor, ac porttitor massa aliquet id. Pellentesque ac ex congue, egestas dolor a, elementum odio. Etiam laoreet, mi et luctus tempor, mi tellus vehicula nibh, rhoncus consectetur libero felis pellentesque dolor. Donec egestas lorem lacus, eu porta ligula dictum nec. Aliquam erat volutpat. Suspendisse varius bibendum porta. Fusce et luctus mauris. Sed euismod nibh quis tincidunt venenatis. Suspendisse tristique, lectus et ornare condimentum, velit ligula sollicitudin ex, vel tempus velit erat quis mauris. Pellentesque viverra elit in elit scelerisque maximus."
+    "hero": "Neighbourhood Organizers Unite to Form Canada-Wide Organization",
+    "intro": {
+      "paragraph1": "On August 31, 2025 neighbourhood organizers from across Canada got together in Toronto for the 'Off the Defensive Conference,' where we founded an organization: <strong>Off The Defensive / Offensive Populaire (OTD / OP).</strong>",
+      "paragraph2": "The conference drew in over 80 organizers from seven cities across the country. The new organization unites members from nearly a dozen neighbourhood, community and housing class-struggle organizations under one banner and for one clear mission: uniting and organizing for class struggle in neighbourhoods across Canada."
+    },
+    "classStruggle": {
+      "heading": "OTD / OP Is Not a Coalition, Lobbying Group, NGO or Foundation—",
+      "paragraph1": "but a <em>class-struggle organization</em> that aims to share the lessons of years of neighbourhood struggles by our organizers. We will sharpen our skills, develop our analysis and unify on a strategy in our common struggle to liberate working-class communities from the economic and social crises, exploitation and oppressions of capitalism.",
+      "paragraph2": "We aim to organize our neighbourhoods for all the necessary struggles, not just against the landlords, but all the big capitalists and the government bureaucrats who rule over this miserable system."
+    },
+    "localism": {
+      "heading": "Learning from Past Experience",
+      "paragraph1": "A firm point of unity struck at the OTD Conference was that virtually all of the local struggles we've been a part of and that have been unfolding in other neighbourhoods and parts of Canada over the past five years have only been able to confront the local manifestations of the ruling class and of the capitalist system.",
+      "paragraph2": "In our view, the critical limitation of these local struggles, including those that we have been involved with, is that they've lacked both a unity on strategy, aspiration, capacity or direction beyond the immediate.",
+      "paragraph3": "We call this limitation <em>localism.</em> Overcoming this limitation requires developing a strategy for going <em>off the defensive.</em>"
+    },
+    "overcoming": {
+      "heading": "Overcoming Localism",
+      "paragraph1": "We have, until now, only fought against local manifestations of our enemies and issues: local landlords, politicians, business people. However, these people are not isolated to our neighbourhoods and cities.",
+      "paragraph2": "They are organized in lobbies, parties, cartels, business associations and chambers of commerce. These organizations allow them to build strength and influence not only at a city-wide level, but also regionally, provincially, nationally, and often even internationally.",
+      "paragraph3": "If we, the working people of this country, don't have our own movement that can unite struggles, people and organizations from neighbourhoods across the country, we will never be able to build the momentum we need to finally assert real working-class power. So, we must not only continue building our local struggles, but also bring these struggles beyond our neighbourhoods, beyond their narrow sectors of work, and toward the development of class-struggle organizations that outlive their eventual ebb and flow cycles."
+    },
+    "socialism": {
+      "heading": "Our Strategic Horizon is Socialism",
+      "paragraph1": "\"Socialism\" will not be a hollow word we dangle in the abstract, while in practice only trying to soften the blows of capitalism against the working class. Fighting for socialism begs us to pose serious strategic questions. We want to take these questions seriously.",
+      "paragraph2": "While we cannot win the fight for socialism in our neighborhoods alone, we believe that our neighbourhoods are a crucial front in this fight (alongside our workplaces)."
+    },
+    "struggle": {
+      "heading": "Our Struggle is Class Struggle",
+      "paragraph1": "To break out of localized and sectoral silos is also to recognize the one thing that unites every one of the struggles we face: class exploitation.",
+      "paragraph2": "We have to expose the class conflicts between the workers and the elites that are at the root of every fight we take on, and connect them with the broader fight towards working class power in our neighbourhoods.",
+      "paragraph3": "To do this, each one of our chapters are mandated to start, lead, and actively support class struggles in their local communities, as well as to form and nurture Neighbourhood Defence Committees that can maintain these class struggles. We are presently recruiting new members, forming new chapters and taking up new struggles in our neighbourhoods. 5 chapters, in as many cities, have been formed coming out of the OTD conference and have already kicked off their local activities."
+    }
   },
   "documents": {
     "title": "Documents",
