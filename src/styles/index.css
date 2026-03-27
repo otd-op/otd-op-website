@@ -1,0 +1,8 @@
+/**
+ * Design System Index
+ * Import this file to include all design system styles
+ */
+
+@import './tokens.css';
+@import './typography.css';
+@import './spacing.css';
