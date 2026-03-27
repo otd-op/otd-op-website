@@ -20,15 +20,16 @@ const alternateLocale = locale === 'en' ? 'fr' : 'en';
 const alternatePath = pathname.replace(`/${locale}/`, `/${alternateLocale}/`);
 const alternateUrl = `${siteUrl}${alternatePath}`;
 
-const fullTitle = `${title} | Off The Defensive`;
-const defaultOgImage = `${siteUrl}/logo.jpg`;
+const siteName = locale === 'en' ? 'Off The Defensive' : 'Offensive Populaire';
+const fullTitle = `${title} | ${siteName}`;
+const defaultOgImage = `${siteUrl}/opengraph-${locale}.jpg`;
 const ogImageUrl = ogImage || defaultOgImage;
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Off The Defensive',
-  alternateName: 'Offensive Populaire',
+  name: siteName,
+  alternateName: locale === 'en' ? 'Offensive Populaire' : 'Off The Defensive',
   url: siteUrl,
   logo: `${siteUrl}/android-chrome-512x512.png`,
   sameAs: ['https://instagram.com/otd_op'],
@@ -45,7 +46,7 @@ const organizationSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="Off The Defensive" />
+    <meta name="author" content={siteName} />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Favicons -->
@@ -84,7 +85,7 @@ const organizationSchema = {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:site_name" content="Off The Defensive" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:locale" content={locale === 'en' ? 'en_CA' : 'fr_CA'} />
 
     <!-- Twitter Card -->
