@@ -1,30 +1,30 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublishedPosts, getAllTags } from '../../../utils/content';
+import { ROUTES } from '../../../config/routes';
 
-const posts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = await getPublishedPosts();
+const tagCounts = getAllTags(posts);
 
-const tagCounts = new Map<string, number>();
-for (const post of posts) {
-  for (const tag of post.data.tags) {
-    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
-  }
-}
-
-const tags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
+const entries: Array<[string, number]> = Array.from(tagCounts.entries());
+const sortedTags = entries.sort((a, b) => b[1] - a[1]);
 ---
 
 {
-  tags.length > 0 && (
+  sortedTags.length > 0 && (
     <div>
       <h3>Tags</h3>
       <ul>
-        {tags.map(([tag, count]) => (
-          <li>
-            <a href={`/blog/tag/${tag}`}>
-              {tag} ({count})
-            </a>
-          </li>
-        ))}
+        {sortedTags.map(entry => {
+          const tag = entry[0];
+          const count = entry[1];
+          return (
+            <li>
+              <a href={ROUTES.tag(tag)}>
+                {tag} ({count})
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   )

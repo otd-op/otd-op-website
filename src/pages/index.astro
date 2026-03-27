@@ -1,6 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import InstagramEmbed from '../components/InstagramEmbed.astro';
+import ContentSection from '../components/ContentSection.astro';
+
+const sections = [
+  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+  { title: 'OFF THE DEFENSIVE', content: 'lorem ipsum' },
+];
 ---
 
 <Layout title="Home" description="Welcome to Off The Defensive">
@@ -11,35 +21,7 @@ import InstagramEmbed from '../components/InstagramEmbed.astro';
     </div>
 
     <!-- Content Sections -->
-    <section class="home__section">
-      <h2>OFF THE DEFENSIVE</h2>
-      <p>lorem ipsum</p>
-    </section>
-
-    <section class="home__section">
-      <h2>OFF THE DEFENSIVE</h2>
-      <p>lorem ipsum</p>
-    </section>
-
-    <section class="home__section">
-      <h2>OFF THE DEFENSIVE</h2>
-      <p>lorem ipsum</p>
-    </section>
-
-    <section class="home__section">
-      <h2>OFF THE DEFENSIVE</h2>
-      <p>lorem ipsum</p>
-    </section>
-
-    <section class="home__section">
-      <h2>OFF THE DEFENSIVE</h2>
-      <p>lorem ipsum</p>
-    </section>
-
-    <section class="home__section">
-      <h2>OFF THE DEFENSIVE</h2>
-      <p>lorem ipsum</p>
-    </section>
+    {sections.map(section => <ContentSection title={section.title} content={section.content} />)}
 
     <!-- Instagram Embed -->
     <div class="home__instagram">
@@ -67,19 +49,6 @@ import InstagramEmbed from '../components/InstagramEmbed.astro';
   .placeholder--hero {
     aspect-ratio: 16 / 9;
     min-height: 350px;
-  }
-
-  .home__section {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .home__section h2 {
-    font-size: 18px;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
   }
 
   .home__instagram {

@@ -1,6 +1,8 @@
 ---
+import type { NavItem } from '../types/navigation';
+
 interface Props {
-  activeItem?: 'about' | 'articles' | 'documents' | 'join';
+  activeItem?: NavItem;
 }
 
 const { activeItem } = Astro.props;
@@ -13,10 +15,9 @@ const navItems = [
 ];
 
 import Logo from '../assets/logo.svg';
-import InstagramIcon from '../assets/instagram.svg';
-import RssIcon from '../assets/rss.svg';
 import Divider from '../assets/divider.svg';
-import NavItem from './NavItem.astro';
+import NavItemComponent from './NavItem.astro';
+import SocialLinks from './SocialLinks.astro';
 ---
 
 <nav class="navbar">
@@ -30,38 +31,16 @@ import NavItem from './NavItem.astro';
     <ul class="navbar__links">
       {
         navItems.map(item => (
-          <NavItem label={item.label} href={item.href} isActive={activeItem === item.id} />
+          <NavItemComponent label={item.label} href={item.href} isActive={activeItem === item.id} />
         ))
       }
       <li class="navbar__mobile-actions">
-        <a
-          href="https://www.instagram.com/otd.op/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="navbar__icon-btn"
-          aria-label="Instagram"
-        >
-          <InstagramIcon />
-        </a>
-        <a href="/rss.xml" class="navbar__icon-btn" aria-label="RSS Feed">
-          <RssIcon />
-        </a>
+        <SocialLinks />
       </li>
     </ul>
 
     <div class="navbar__actions">
-      <a
-        href="https://www.instagram.com/otd.op/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="navbar__icon-btn"
-        aria-label="Instagram"
-      >
-        <InstagramIcon />
-      </a>
-      <a href="/rss.xml" class="navbar__icon-btn" aria-label="RSS Feed">
-        <RssIcon />
-      </a>
+      <SocialLinks />
     </div>
 
     <button class="navbar__menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -111,12 +90,6 @@ import NavItem from './NavItem.astro';
     flex-shrink: 0;
   }
 
-  .navbar__logo :global(svg) {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
   .navbar__links {
     display: flex;
     align-items: center;
@@ -138,28 +111,23 @@ import NavItem from './NavItem.astro';
     flex-shrink: 0;
   }
 
-  .navbar__icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .navbar__actions :global(.icon-btn) {
     width: 24px;
     height: 24px;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: inherit;
-  }
-
-  .navbar__icon-btn :global(svg) {
-    width: 100%;
-    height: 100%;
-    display: block;
   }
 
   .navbar__mobile-actions {
     display: none;
     list-style: none;
+  }
+
+  .navbar__mobile-actions :global(div) {
+    gap: 24px;
+  }
+
+  .navbar__mobile-actions :global(.icon-btn) {
+    width: 32px;
+    height: 32px;
   }
 
   .navbar__menu-toggle {
@@ -253,15 +221,9 @@ import NavItem from './NavItem.astro';
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
       padding: 24px 0;
       width: 100%;
       border-bottom: 1px solid #000;
-    }
-
-    .navbar__mobile-actions .navbar__icon-btn {
-      width: 32px;
-      height: 32px;
     }
 
     .navbar__menu-toggle {

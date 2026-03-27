@@ -1,10 +1,11 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import type { NavItem } from '../types/navigation';
 
 interface Props {
   title: string;
   description?: string;
-  activeNav?: 'about' | 'articles' | 'documents' | 'join';
+  activeNav?: NavItem;
 }
 
 const { title, description, activeNav } = Astro.props;
