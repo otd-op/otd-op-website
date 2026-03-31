@@ -7,38 +7,42 @@ interface Props {
   locale: Locale;
 }
 
+interface Document {
+  name: string;
+  description: string;
+  file: string;
+  date: Date;
+}
+
 const { locale } = Astro.props;
 
 const downloadHeading = t(locale, 'documents.downloadHeading');
 const downloadText = t(locale, 'documents.download');
 
-const documents = [
+const documents: Document[] = [
   {
     name: t(locale, 'documents.list.0.name'),
     description: t(locale, 'documents.list.0.description'),
     file: t(locale, 'documents.list.0.file'),
+    date: new Date('2025-08-31'),
   },
   {
     name: t(locale, 'documents.list.1.name'),
     description: t(locale, 'documents.list.1.description'),
     file: t(locale, 'documents.list.1.file'),
+    date: new Date('2025-12-12'),
   },
   {
     name: t(locale, 'documents.list.2.name'),
     description: t(locale, 'documents.list.2.description'),
     file: t(locale, 'documents.list.2.file'),
+    date: new Date('2025-12-12'),
   },
-  {
-    name: t(locale, 'documents.list.3.name'),
-    description: t(locale, 'documents.list.3.description'),
-    file: t(locale, 'documents.list.3.file'),
-  },
-  {
-    name: t(locale, 'documents.list.4.name'),
-    description: t(locale, 'documents.list.4.description'),
-    file: t(locale, 'documents.list.4.file'),
-  },
-];
+].sort((a, b) => {
+  const dateCompare = b.date.getTime() - a.date.getTime();
+  if (dateCompare !== 0) return dateCompare;
+  return a.name.localeCompare(b.name);
+});
 ---
 
 <Layout
@@ -48,18 +52,28 @@ const documents = [
 >
   <main class="container">
     <div class="documents-container">
-      <h2 class="documents-heading text-heading-1">{downloadHeading}</h2>
+      <h2 class="text-heading-1">{downloadHeading}</h2>
 
       <ul class="documents-list">
         {
           documents.map((doc, index) => (
             <li class="document-item">
               <div class="document-header">
-                <span class="document-name text-body-medium">{doc.name}</span>
+                <div class="header-details">
+                  <span class="document-name text-body-medium">{doc.name}</span>
+                  <p class="document-date text-body">
+                    {doc.date.toLocaleDateString(locale, {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </p>
+                </div>
                 <a href={doc.file} class="document-download text-body-medium" download>
                   {downloadText}
                 </a>
               </div>
+
               <p class="document-description text-body">{doc.description}</p>
               {index < documents.length - 1 && <hr class="document-divider" />}
             </li>
@@ -77,10 +91,6 @@ const documents = [
     gap: var(--space-4);
   }
 
-  .documents-heading {
-    margin: 0;
-  }
-
   .documents-list {
     display: flex;
     flex-direction: column;
@@ -91,6 +101,11 @@ const documents = [
     display: flex;
     flex-direction: column;
     gap: var(--space-1);
+  }
+
+  .header-details {
+    display: flex;
+    flex-direction: column;
   }
 
   .document-header {
@@ -115,6 +130,11 @@ const documents = [
 
   .document-download:hover {
     color: var(--color-text-primary);
+  }
+
+  .document-date {
+    margin: 0;
+    color: var(--color-text-secondary);
   }
 
   .document-description {
