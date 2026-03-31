@@ -1,3 +1,1 @@
 # Off the Defensive
-
-
