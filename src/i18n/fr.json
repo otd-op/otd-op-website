@@ -73,29 +73,19 @@
     "download": "Télécharger",
     "list": [
       {
-        "name": "Nom du Document",
-        "description": "Brève description du document.",
-        "file": "/documents/document-1.pdf"
+        "name": "Base d'Unité",
+        "description": "Le document fondateur d'OTD / OP, débattu, amendé et voté lors de la Conférence Off the Defensive. Il établit la situation objective, notre horizon stratégique du socialisme, et la structure organisationnelle des chapitres et des comités de coordination.",
+        "file": "/documents/base_dunite.pdf"
       },
       {
-        "name": "Nom du Document",
-        "description": "Brève description du document.",
-        "file": "/documents/document-2.pdf"
+        "name": "Proposition de Budget et de Financement",
+        "description": "La proposition budgétaire pour 2026 incluant les coûts prévus pour l'Assemblée Fondatrice et une stratégie de financement basée sur les chapitres où chaque chapitre collecte des fonds par membre pour centraliser les ressources.",
+        "file": "/documents/budget_et_plan_de_financement.pdf"
       },
       {
-        "name": "Nom du Document",
-        "description": "Brève description du document.",
-        "file": "/documents/document-3.pdf"
-      },
-      {
-        "name": "Nom du Document",
-        "description": "Brève description du document.",
-        "file": "/documents/document-4.pdf"
-      },
-      {
-        "name": "Nom du Document",
-        "description": "Brève description du document.",
-        "file": "/documents/document-5.pdf"
+        "name": "Plan Organisationnel",
+        "description": "Détaille les plans centraux de l'organisation de 2025-2026 menant à l'Assemblée Fondatrice, incluant les jalons trimestriels pour le lancement des chapitres, l'éducation politique et l'expansion vers de nouvelles villes.",
+        "file": "/documents/plan_organisationnel.pdf"
       }
     ]
   },
