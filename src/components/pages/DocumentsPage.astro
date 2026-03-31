@@ -26,23 +26,7 @@ const documents: Document[] = [
     file: t(locale, 'documents.list.0.file'),
     date: new Date('2025-08-31'),
   },
-  {
-    name: t(locale, 'documents.list.1.name'),
-    description: t(locale, 'documents.list.1.description'),
-    file: t(locale, 'documents.list.1.file'),
-    date: new Date('2025-12-12'),
-  },
-  {
-    name: t(locale, 'documents.list.2.name'),
-    description: t(locale, 'documents.list.2.description'),
-    file: t(locale, 'documents.list.2.file'),
-    date: new Date('2025-12-12'),
-  },
-].sort((a, b) => {
-  const dateCompare = b.date.getTime() - a.date.getTime();
-  if (dateCompare !== 0) return dateCompare;
-  return a.name.localeCompare(b.name);
-});
+];
 ---
 
 <Layout
