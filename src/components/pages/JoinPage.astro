@@ -1,7 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import type { Locale } from '../../i18n';
 import { t } from '../../i18n';
+import Layout from '../../layouts/Layout.astro';
 
 interface Props {
   locale: Locale;
@@ -16,15 +16,26 @@ const { locale } = Astro.props;
   activeNav="join"
 >
   <main class="container">
-    <h1>{t(locale, 'join.heading')}</h1>
-    <p>{t(locale, 'join.message')}</p>
-    <p>{t(locale, 'join.contactPrefix')} <strong><u>{t(locale, 'join.email')}</u></strong></p>
-    <p>
-      {t(locale, 'join.protonText')}
-      <strong
-        ><u><a href="https://proton.me" target="_blank" rel="noopener noreferrer">ProtonMail</a></u
-        ></strong
-      >.
-    </p>
+    <h1 class="text-heading-1">{t(locale, 'join.heading')}</h1>
+    <div>
+      <p>{t(locale, 'join.message')}</p>
+      <p>{t(locale, 'join.contactPrefix')} <strong><u>{t(locale, 'join.email')}</u></strong></p>
+      <p>
+        {t(locale, 'join.protonText')}
+        <strong
+          ><u
+            ><a href="https://proton.me" target="_blank" rel="noopener noreferrer">ProtonMail</a></u
+          ></strong
+        >.
+      </p>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+</style>

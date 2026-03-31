@@ -26,3 +26,7 @@ npm run build
 - **TypeScript**: Type-safe JavaScript
 - **Cloudflare**: Edge deployment
 - **Content Collections**: Type-safe content with `src/content.config.ts`
+
+## Code Style
+
+- **No Comments**: Do not add code comments. Code should be self-explanatory.
