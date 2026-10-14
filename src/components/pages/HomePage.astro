@@ -1,6 +1,7 @@
 ---
 import ContentSection from '../../components/ContentSection.astro';
 import InstagramEmbed from '../../components/InstagramEmbed.astro';
+import PodcastEmbed from '../../components/PodcastEmbed.astro';
 import type { Locale } from '../../i18n';
 import { t } from '../../i18n';
 import Layout from '../../layouts/Layout.astro';
@@ -41,6 +42,11 @@ const sections = [
       ))
     }
 
+    <!-- Podcast Embed -->
+    <div class="home__podcast">
+      <PodcastEmbed locale={locale} />
+    </div>
+
     <!-- Instagram Embed -->
     <div class="home__instagram">
       <InstagramEmbed />
@@ -67,6 +73,10 @@ const sections = [
   .placeholder--hero {
     aspect-ratio: 16 / 9;
     min-height: 350px;
+  }
+
+  .home__podcast {
+    width: 100%;
   }
 
   .home__instagram {
