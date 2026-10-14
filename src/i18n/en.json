@@ -25,6 +25,10 @@
         "title": "JOIN US",
         "content": "5 chapters have been formed across Canada since our founding conference, with new chapters forming and local activities already underway. Interested in joining or starting a chapter in your neighbourhood? We'd love to hear from you."
       }
+    },
+    "podcast": {
+      "title": "The Barricade",
+      "moreEpisodes": "More episodes →"
     }
   },
   "about": {

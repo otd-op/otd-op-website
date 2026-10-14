@@ -1,0 +1,49 @@
+---
+import type { Locale } from '../i18n';
+import { t } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="podcast">
+  <iframe
+    src="https://open.spotify.com/embed/show/033t5sMR8VCKYqA39vSsAP"
+    width="100%"
+    height="232"
+    style="border:0;"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+    title={t(locale, 'home.podcast.title')}
+    class="podcast__iframe"
+  >
+  </iframe>
+  <a
+    href="https://sites.libsyn.com/614960/links"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-body-sm link-underline podcast__link"
+  >
+    {t(locale, 'home.podcast.moreEpisodes')}
+  </a>
+</section>
+
+<style>
+  .podcast {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .podcast__iframe {
+    border-radius: var(--radius-md);
+  }
+
+  .podcast__link {
+    font-weight: 500;
+  }
+</style>
